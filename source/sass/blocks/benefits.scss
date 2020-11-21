@@ -2,7 +2,6 @@
   list-style: none;
   margin: 0;
   padding: 0;
-
   text-transform: uppercase;
   text-align: left;
 }
@@ -36,20 +35,16 @@
 
 .benefits__title {
   margin: 0;
-  padding: 15px 0 20px 0;
-
+  padding: 15px 0 20px;
   font-size: 18px;
   line-height: 26px;
   font-weight: 700;
-
   color: $text-main;
 }
 
 .benefits__text {
   margin: 0;
-
   font-size: 14px;
   line-height: 21px;
-
   color: $text-additional;
 }

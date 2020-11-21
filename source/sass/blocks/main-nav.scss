@@ -1,11 +1,11 @@
-$bg-normal: #81B3D2;
-$bg-hover: #669EC0;
-$bg-active: #5496BD;
-$text-normal: #fff;
-$text-hover: #fff;
+$bg-normal: #81b3d2;
+$bg-hover: #669ec0;
+$bg-active: #5496bd;
+$text-normal: #ffffff;
+$text-hover: #ffffff;
 $text-active: rgba(255, 255, 255, 0.3);
 
-.main-nav {}
+// .main-nav {}
 
 .main-nav__toggle {
   display: none;
@@ -22,7 +22,7 @@ $text-active: rgba(255, 255, 255, 0.3);
   margin: 0;
   padding: 0;
 
-  &:after {
+  &::after {
     position: absolute;
     bottom: 0;
     width: 100%;
@@ -33,7 +33,7 @@ $text-active: rgba(255, 255, 255, 0.3);
   }
 }
 
-.main-nav__item {}
+// .main-nav__item {}
 
 .main-nav__link {
   display: block;
