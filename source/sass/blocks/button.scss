@@ -1,0 +1,42 @@
+$bg-normal: #81B3D2;
+$bg-hover: #669EC0;
+$bg-active: #5496BD;
+$bg-disabled: #E5E5E5;
+$text-normal: #fff;
+$text-hover: #fff;
+$text-active: rgba(255, 255, 255, 0.3);
+$text-disabled: #fff;
+
+.button {
+  display: block;
+  width: 100%;
+  min-height: 26px;
+  padding: 16px 15px;
+
+  font-size: 21px;
+  line-height: 26px;
+  font-weight: 700;
+  text-align: center;
+  text-decoration: none;
+  text-transform: uppercase;
+
+  color: $text-normal;
+  background-color: $bg-normal;
+  border: 0;
+
+  &:hover,
+  &:focus {
+    color: $text-hover;
+    background-color: $bg-hover;
+  }
+
+  &:active {
+    color: $text-active;
+    background-color: $bg-active;
+  }
+
+  &:disabled {
+    color: $text-disabled;
+    background-color: $bg-disabled;
+  }
+}

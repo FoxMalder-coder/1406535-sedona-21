@@ -4,6 +4,7 @@
 <head>
   <meta charset="utf-8">
   <title>HTML Academy: Седона</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="stylesheet" href="css/style.css">
 </head>
 
@@ -37,8 +38,10 @@
         <div class="intro__logo page-logo">
           <img src="img/page-logotype-main.svg" alt="Welcome to Sedona">
         </div>
-        <b class="intro__slogan">Оставьте свой отзыв</b>
-        <p class="intro__text">Помогите нашим отелям стать лучше! Оставьте отзыв о них, а также о посещенных вами достопримечательностях</p>
+        <div class="intro__lead lead">
+          <b class="lead__slogan">Оставьте свой отзыв</b>
+          <p class="lead__text">Помогите нашим отелям стать лучше! Оставьте отзыв о них, а также о посещенных вами достопримечательностях</p>
+        </div>
       </div>
     </div>
 
@@ -114,16 +117,20 @@
 
     <div id="modal-error" class="modal">
       <div class="modal__wrapper">
-        <b class="modal__title">Что-то пошло не так!</b>
-        <p class="modal__text">Проверьте поля, выделенные красным, скорее всего вы забыли их заполнить</p>
+        <div class="lead">
+          <b class="lead__slogan">Что-то пошло не так!</b>
+          <p class="lead__text">Проверьте поля, выделенные красным, скорее всего вы забыли их заполнить</p>
+        </div>
         <button class="button button--close">ОК</button>
       </div>
     </div>
 
     <div id="modal-success" class="modal">
       <div class="modal__wrapper">
-        <b class="modal__title">Ваш отзыв отправлен!</b>
-        <p class="modal__text">Спасибо за ваше участие, ваш отзыв уже поступил к нам. В ближайшее время мы опубликуем его на сайте.</p>
+        <div class="lead">
+          <b class="lead__slogan">Ваш отзыв отправлен!</b>
+          <p class="lead__text">Спасибо за ваше участие, ваш отзыв уже поступил к нам. В ближайшее время мы опубликуем его на сайте.</p>
+        </div>
         <button class="button button--close">Закрыть окно</button>
       </div>
     </div>

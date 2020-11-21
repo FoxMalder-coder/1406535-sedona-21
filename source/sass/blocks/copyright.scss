@@ -1,0 +1,28 @@
+.copyright {
+  width: 145px;
+  height: 34px;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+
+.copyright__text {
+  display: block;
+  width: auto;
+  margin-right: 10px;
+  font-size: 14px;
+  line-height: auto;
+  font-weight: 400;
+  text-transform: uppercase;
+
+  color: $text-main;
+}
+
+.copyright__link {
+  width: 27px;
+  height: 34px;
+  background-image: url("../img/logotype-htmlacademy.svg");
+  background-size: auto;
+  background-repeat: no-repeat;
+  background-position: 50% 50%;
+}

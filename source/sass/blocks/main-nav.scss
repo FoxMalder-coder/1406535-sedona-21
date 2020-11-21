@@ -1,0 +1,61 @@
+$bg-normal: #81B3D2;
+$bg-hover: #669EC0;
+$bg-active: #5496BD;
+$text-normal: #fff;
+$text-hover: #fff;
+$text-active: rgba(255, 255, 255, 0.3);
+
+.main-nav {}
+
+.main-nav__toggle {
+  display: none;
+  width: 22px;
+  height: 22px;
+  padding: 0;
+  border: 0;
+  background: url("../img/icon-menu.svg") 50% 50% no-repeat;
+}
+
+.main-nav__list {
+  position: relative;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+
+  &:after {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 7px;
+    display: block;
+    content: "";
+    background: linear-gradient(180deg, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.2) 100%);
+  }
+}
+
+.main-nav__item {}
+
+.main-nav__link {
+  display: block;
+  width: 100%;
+  height: 55px;
+  font-size: 18px;
+  line-height: 55px;
+  font-weight: 700;
+  text-transform: uppercase;
+  text-align: center;
+  color: $text-normal;
+  background-color: $bg-normal;
+  box-shadow: 0 1px 0 rgba(1, 1, 1, 0.2), inset 0 1px 0 rgba(255, 255, 255, 0.2);
+
+  &:focus,
+  &:hover {
+    color: $text-hover;
+    background-color: $bg-hover;
+  }
+
+  &:active {
+    color: $text-active;
+    background-color: $bg-active;
+  }
+}

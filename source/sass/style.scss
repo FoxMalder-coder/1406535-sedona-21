@@ -1,1 +1,30 @@
-// Начните писать стили здесь
+// Подключили normalize.css
+@import "normalize.scss";
+
+@import "global.scss";
+
+@import "blocks/variables.scss";
+
+@import "blocks/page.scss";
+
+@import "blocks/button.scss";
+
+@import "blocks/intro.scss";
+
+@import "blocks/page-logo.scss";
+
+@import "blocks/lead.scss";
+
+@import "blocks/features.scss";
+
+@import "blocks/benefits.scss";
+
+@import "blocks/hashtag.scss";
+
+@import "blocks/social.scss";
+
+@import "blocks/copyright";
+
+@import "blocks/main-nav.scss";
+
+@import "blocks/page-header.scss";
