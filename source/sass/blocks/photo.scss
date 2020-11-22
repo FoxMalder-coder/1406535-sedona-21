@@ -1,9 +1,9 @@
 // .photo {}
 
-.photo__image {
+.photo__image img {
   width: 100%;
-  height: auto;
-  outline: 1px solid red;
+  height: 280px;
+  object-fit: cover;
 }
 
 .photo__title {
@@ -12,6 +12,7 @@
 
   font-size: 14px;
   line-height: 24px;
+  font-weight: 700;
   text-transform: uppercase;
 
   color: $text-main;
@@ -22,6 +23,7 @@
 
   font-size: 14px;
   line-height: 24px;
+  font-weight: 400;
 
   color: $text-additional;
 }
