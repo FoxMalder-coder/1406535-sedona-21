@@ -1,14 +1,11 @@
 // Подключили normalize.css
-// @import "normalize.scss";
+@import "normalize.scss";
 
 // Подключили normalize.css
 @import "global.scss";
 
 // Подключили normalize.css
 @import "blocks/variables.scss";
-
-// Подключили normalize.css
-@import "blocks/page.scss";
 
 // Подключили normalize.css
 @import "blocks/button.scss";
@@ -42,3 +39,9 @@
 
 // Подключили normalize.css
 @import "blocks/page-header.scss";
+
+// Подключили форму
+@import "blocks/form.scss";
+
+// Подключили форму
+@import "blocks/page-footer.scss";

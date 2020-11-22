@@ -7,18 +7,18 @@
   <meta name="viewport" content="width=device-width; initial-scale=1">
   <link rel="preconnect" href="https://fonts.gstatic.com">
   <link href="https://fonts.googleapis.com/css2?family=PT+Sans:wght@400;700&display=swap" rel="stylesheet">
-  <!-- <link rel="stylesheet" href="css/normalize.css"> -->
   <link rel="stylesheet" href="css/style.css">
 </head>
 
-<body class="page__body">
+<body class="page-body">
+
   <header class="page-header">
     <div class="page-header__wrapper">
       <nav class="main-nav">
         <button class="main-nav__toggle" type="button"><span class="visually-hidden">Открыть меню</span></button>
         <ul class="main-nav__list">
           <li class="main-nav__item">
-            <a class="main-nav__link">Главная</a>
+            <a class="main-nav__link main-nav__link--active">Главная</a>
           </li>
           <li class="main-nav__item">
             <a class="main-nav__link" href="catalog.html">Фото и видео</a>
@@ -43,8 +43,10 @@
 
     <div class="intro">
       <div class="intro__wrapper">
-        <div class="intro__logo page-logo page-logo--main">
-          <img src="img/page-logotype-main.svg" alt="Welcome to Sedona">
+        <div class="intro__logo intro__logo--main">
+          <div class="page-logo page-logo--main">
+            <img src="img/page-logotype-main.svg" alt="Welcome to Sedona">
+          </div>
         </div>
         <div class="intro__lead intro__lead--main lead">
           <b class="lead__slogan">Седона — небольшой городок в Аризоне, заслуживающий большего!</b>
@@ -114,9 +116,7 @@
           </li>
         </ul>
       </div>
-
     </section>
-
 
     <section class="search">
       <div class="search__wrapper">
