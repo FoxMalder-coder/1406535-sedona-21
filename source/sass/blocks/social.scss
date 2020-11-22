@@ -1,0 +1,50 @@
+$bg-normal: #81b3d2;
+$bg-hover: #669ec0;
+$bg-active: #5496bd;
+
+// .social {}
+
+.social__list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: space-between;
+}
+
+.social__item {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.social__link {
+  width: 46px;
+  height: 48px;
+
+  background-color: $bg-normal;
+  background-repeat: no-repeat;
+  background-size: auto;
+  background-position: 50% 50%;
+
+  &:hover,
+  &:focus {
+    background-color: $bg-hover;
+  }
+
+  &:active {
+    background-color: $bg-active;
+  }
+
+  &--twitter {
+    background-image: url("../img/icon-twitter.svg");
+  }
+
+  &--facebook {
+    background-image: url("../img/icon-facebook.svg");
+  }
+
+  &--youtube {
+    background-image: url("../img/icon-youtube.svg");
+  }
+}

@@ -1,0 +1,40 @@
+$bg-normal: #81b3d2;
+$bg-hover: #669ec0;
+$bg-active: #5496bd;
+$bg-disabled: #e5e5e5;
+$text-normal: #ffffff;
+$text-hover: #ffffff;
+$text-active: rgba(255, 255, 255, 0.3);
+$text-disabled: #ffffff;
+
+.button {
+  display: block;
+  width: 100%;
+  min-height: 26px;
+  padding: 16px 15px;
+  font-size: 21px;
+  line-height: 26px;
+  font-weight: 700;
+  text-align: center;
+  text-decoration: none;
+  text-transform: uppercase;
+  color: $text-normal;
+  background-color: $bg-normal;
+  border: 0;
+
+  &:focus,
+  &:hover {
+    color: $text-hover;
+    background-color: $bg-hover;
+  }
+
+  &:active {
+    color: $text-active;
+    background-color: $bg-active;
+  }
+
+  &:disabled {
+    color: $text-disabled;
+    background-color: $bg-disabled;
+  }
+}

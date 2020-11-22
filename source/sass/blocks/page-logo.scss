@@ -1,0 +1,36 @@
+.page-logo {
+  position: relative;
+  width: 229px;
+  height: 39px;
+  object-fit: contain;
+}
+
+.page-logo--main {
+  width: 282px;
+  height: 214px;
+  padding: 80px 0;
+  object-fit: contain;
+
+  &::after,
+  &::before {
+    position: absolute;
+    display: block;
+    content: "";
+  }
+
+  &::before {
+    top: 0;
+    left: (282px - 157px) / 2;
+    width: 157px;
+    height: 52px;
+    background-image: url("../img/page-logotype-before.svg");
+  }
+
+  &::after {
+    bottom: 0;
+    left: (282px - 180px) / 2;
+    width: 180px;
+    height: 48px;
+    background-image: url("../img/page-logotype-after.svg");
+  }
+}

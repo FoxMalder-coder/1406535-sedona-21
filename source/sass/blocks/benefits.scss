@@ -1,0 +1,50 @@
+.benefits {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  text-transform: uppercase;
+  text-align: left;
+}
+
+.benefits__item {
+  margin-bottom: 10px;
+  padding-left: 55px;
+
+  &:last-child {
+    margin-bottom: 0;
+  }
+
+  &--house {
+    background-image: url("../img/icon-house.svg");
+    background-repeat: no-repeat;
+    background-size: 39px 37px;
+  }
+
+  &--gift {
+    background-image: url("../img/icon-gift.svg");
+    background-repeat: no-repeat;
+    background-size: 32px 38px;
+  }
+
+  &--food {
+    background-image: url("../img/icon-food.svg");
+    background-repeat: no-repeat;
+    background-size: 40px 35px;
+  }
+}
+
+.benefits__title {
+  margin: 0;
+  padding: 15px 0 20px;
+  font-size: 18px;
+  line-height: 26px;
+  font-weight: 700;
+  color: $text-main;
+}
+
+.benefits__text {
+  margin: 0;
+  font-size: 14px;
+  line-height: 21px;
+  color: $text-additional;
+}
