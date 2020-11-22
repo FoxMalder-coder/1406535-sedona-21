@@ -1,9 +1,21 @@
-// .page-footer {}
+.page-footer {
+  vertical-align: center;
+  align-items: center;
+}
 
-// .page-footer__wrapper {}
+.page-footer__wrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  height: 180px;
+  margin: 28px 0 23px;
+}
 
 // .page-footer__hashtag {}
 
-// .page-footer__social {}
+.page-footer__social {
+  width: 151px;
+}
 
 // .page-footer__copyright {}

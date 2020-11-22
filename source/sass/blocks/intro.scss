@@ -1,18 +1,25 @@
-.intro {
+// .intro {}
+// .intro__wrapper {}
+
+.intro__logo {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  min-height: 158px;
   background-color: #af9499;
   background-image: url("../img/background-intro.jpg");
   background-repeat: no-repeat;
   background-position: top center;
+
+  &--main {
+    width: 100%;
+    min-height: 389px;
+  }
 }
-
-// .intro__wrapper {}
-
-// .intro__logo {}
 
 .intro__lead {
   background-color: #ffffff;
 }
-
 // .intro__slogan {}
-
 // .intro__text {}
