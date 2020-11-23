@@ -17,10 +17,8 @@ $text-active: rgba(255, 255, 255, 0.3);
 }
 
 .main-nav__list {
+  @include fix-list;
   position: relative;
-  list-style: none;
-  margin: 0;
-  padding: 0;
 
   &::after {
     position: absolute;

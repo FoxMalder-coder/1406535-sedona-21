@@ -1,14 +1,21 @@
 .benefits {
-  list-style: none;
-  margin: 0;
-  padding: 0;
+  @include fix-list;
+  display: flex;
+  flex-direction: column;
   text-transform: uppercase;
   text-align: left;
+
+  @media (min-width: $width-mobile-only) {
+    flex-direction: row;
+    justify-content: space-around;
+    text-align: center;
+  }
 }
 
 .benefits__item {
   margin-bottom: 10px;
   padding-left: 55px;
+  background-repeat: no-repeat;
 
   &:last-child {
     margin-bottom: 0;
@@ -16,30 +23,56 @@
 
   &--house {
     background-image: url("../img/icon-house.svg");
-    background-repeat: no-repeat;
     background-size: 39px 37px;
+
+    @media (min-width: $width-tablet) {
+      background-size: 75px 72px;
+    }
   }
 
   &--gift {
     background-image: url("../img/icon-gift.svg");
-    background-repeat: no-repeat;
     background-size: 32px 38px;
+
+    @media (min-width: $width-tablet) {
+      order: 1;
+      background-size: 64px 75px;
+    }
   }
 
   &--food {
     background-image: url("../img/icon-food.svg");
-    background-repeat: no-repeat;
     background-size: 40px 35px;
+
+    @media (min-width: $width-tablet) {
+      background-size: 76px 68px;
+    }
+  }
+
+  @media (min-width: $width-mobile-only) {
+    width: 31%;
+    margin: 0;
+    padding: 45px 0 0;
+    background-position: top center;
+  }
+
+  @media (min-width: $width-tablet) {
+    width: 25%;
+    padding: 104px 0 0;
   }
 }
 
 .benefits__title {
   margin: 0;
-  padding: 15px 0 20px;
+  padding: 0 0 20px;
   font-size: 18px;
   line-height: 26px;
   font-weight: 700;
   color: $text-main;
+
+  @media (min-width: $width-tablet) {
+    font-size: 21px;
+  }
 }
 
 .benefits__text {

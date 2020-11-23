@@ -1,4 +1,17 @@
+// Цвета
 $main-color: #81b3d2;
 $additional-color: #eeeeee;
 $text-main: #000000;
 $text-additional: #333333;
+
+// Брейк-поинты
+$width-mobile-only: 480px;
+$width-tablet: 768px;
+$width-desktop: 1200px;
+
+// Миксины
+@mixin fix-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
