@@ -1,14 +1,12 @@
 .copyright {
   height: 34px;
-  display: flex;
-  justify-content: flex-end;
-  align-items: center;
+  display: grid;
+  grid-template-columns: min-content 27px;
 }
 
 .copyright__text {
-  margin-right: 10px;
-  font-size: 14px;
-  line-height: auto;
+  margin: 0 10px;
+  line-height: 26px;
   font-weight: 400;
   text-transform: uppercase;
 

@@ -1,13 +1,8 @@
 .features {
   @include fix-list;
 
-  font-size: 14px;
-  line-height: 21px;
-  font-weight: 400;
   text-align: center;
   text-transform: uppercase;
-
-  color: $text-additional;
 
   @media (min-width: $width-mobile-only) {
     display: flex;
