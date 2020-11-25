@@ -1,5 +1,6 @@
-// .intro {}
-// .intro__wrapper {}
+.intro {
+  position: relative;
+}
 
 .intro__logo {
   display: flex;
@@ -11,15 +12,71 @@
   background-image: url("../img/background-intro.jpg");
   background-repeat: no-repeat;
   background-position: top center;
+  background-size: cover;
 
-  &--main {
-    width: 100%;
-    min-height: 389px;
+  @media (min-width: $width-tablet) {
+    min-height: 290px;
+  }
+
+  @media (min-width: $width-desktop) {
+    min-height: 300px;
+  }
+}
+
+.intro__logo--main {
+  width: 100%;
+  min-height: 390px;
+
+  @media (min-width: $width-tablet) {
+    min-height: 518px;
   }
 }
 
 .intro__lead {
   background-color: #ffffff;
+
+  // &::before {
+  //   @include pseudo;
+  //   width: 100%;
+  //   height: 57px;
+  //   margin-top: -57px;
+  //   background-image: url("../img/intro-triangle.svg");
+  //   background-repeat: no-repeat;
+  //   background-position: top center;
+  //   background-size: 1200px 57px;
+  //   outline: 1px solid red;
+  // }
+}
+
+.intro__lead--main {
+  // &::after {
+  //   @include pseudo;
+  //   width: 100%;
+  //   height: 37px;
+  //   margin-bottom: 37px;
+  //   background-image: url("../img/intro-triangle-bottom.svg");
+  //   background-repeat: no-repeat;
+  //   background-position: bottom center;
+  //   background-size: 768px 37px;
+  //   outline: 1px solid red;
+  //
+  //   @media (min-width: $width-mobile-only) {
+  //     display: none;
+  //   }
+  // }
+}
+
+.intro__lead--form {
+  outline: 1px solid red;
+  padding: 36px 0 16px;
+
+  @media (min-width: $width-tablet) {
+    padding: 70px 16.15% 66.5px;
+  }
+
+  @media (min-width: $width-desktop) {
+    padding: 113px 28.33% 56.5px;
+  }
 }
 // .intro__slogan {}
 // .intro__text {}
