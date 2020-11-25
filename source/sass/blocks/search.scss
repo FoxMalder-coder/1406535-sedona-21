@@ -1,9 +1,30 @@
 // .search {}
 
-// .search__wrapper {}
+.search__wrapper {
+  padding: 33px 20px 49px;
 
-// .search__title {}
+  @media (min-width: $width-mobile-only) {
+    width: 458px;
+    margin: 0 auto;
+  }
 
-// .search__text {}
+  @media (min-width: $width-tablet) {
+    padding: 58px 0;
+  }
 
-// .search__button {}
+  @media (min-width: $width-desktop) {
+    padding-bottom: 66px;
+  }
+}
+
+.search__button {
+  margin-top: 27px;
+
+  @media (min-width: $width-mobile-only) {
+    margin-top: 37px;
+  }
+
+  @media (min-width: $width-desktop) {
+    margin-top: 42px;
+  }
+}

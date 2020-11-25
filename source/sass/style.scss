@@ -1,53 +1,41 @@
-// Подключили normalize.css
+// normalize.css
 @import "normalize.scss";
 
-// Подключили normalize.css
+// общие стили
 @import "global.scss";
-
-// Подключили normalize.css
-@import "blocks/variables.scss";
-
-// Подключили normalize.css
 @import "blocks/button.scss";
 
-// Подключили normalize.css
-@import "blocks/intro.scss";
+// общие переменные
+@import "blocks/variables.scss";
 
-// Подключили normalize.css
-@import "blocks/page-logo.scss";
+// сетка всей страницы
+@import "blocks/page.scss";
+@import "blocks/page-body.scss";
+@import "blocks/page-main.scss";
 
-// Подключили normalize.css
-@import "blocks/lead.scss";
-
-// Подключили normalize.css
-@import "blocks/features.scss";
-
-// Подключили normalize.css
-@import "blocks/benefits.scss";
-
-// Подключили normalize.css
-@import "blocks/hashtag.scss";
-
-// Подключили normalize.css
-@import "blocks/social.scss";
-
-// Подключили normalize.css
-@import "blocks/copyright";
-
-// Подключили normalize.css
+// Хедер
+@import "blocks/page-header.scss";
+@import "blocks/logo-header.scss";
 @import "blocks/main-nav.scss";
 
-// Подключили normalize.css
-@import "blocks/page-header.scss";
+// Контент
+// Главная, общие
+@import "blocks/intro.scss";
+@import "blocks/page-logo.scss";
+@import "blocks/lead.scss";
+@import "blocks/benefits.scss";
+@import "blocks/features.scss";
+@import "blocks/search.scss";
 
-// Подключили форму
+// Форма отзыва
 @import "blocks/form.scss";
 
-// Подключили форму
-@import "blocks/page-footer.scss";
-
-// Подключили форму
+// Галерея фото и видео
+@import "blocks/gallery.scss";
 @import "blocks/photo.scss";
 
-// Подключили форму
-@import "blocks/gallery.scss";
+// Футер
+@import "blocks/page-footer.scss";
+@import "blocks/hashtag.scss";
+@import "blocks/social.scss";
+@import "blocks/copyright";

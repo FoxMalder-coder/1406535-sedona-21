@@ -1,7 +1,7 @@
 *,
 *::after,
 *::before {
-  box-sizing: inherit;
+  box-sizing: border-box;
 }
 
 img {
@@ -24,14 +24,4 @@ a {
   clip-path: inset(100%);
   clip: rect(0 0 0 0);
   overflow: hidden;
-}
-
-.page {
-  height: 100%;
-  box-sizing: border-box;
-}
-
-.page-body {
-  min-height: 100%;
-  font-family: "PT Sans", sans-serif;
 }

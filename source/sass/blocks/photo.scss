@@ -1,4 +1,6 @@
-// .photo {}
+.photo {
+  line-height: 24px;
+}
 
 .photo__image img {
   width: 100%;
@@ -7,11 +9,8 @@
 }
 
 .photo__title {
-  margin: 0;
-  margin-top: 10px;
+  margin: 10px 0 0;
 
-  font-size: 14px;
-  line-height: 24px;
   font-weight: 700;
   text-transform: uppercase;
 
@@ -20,12 +19,10 @@
 
 .photo__author {
   margin: 0;
-
-  font-size: 14px;
-  line-height: 24px;
-  font-weight: 400;
-
-  color: $text-additional;
 }
 
-// .photo__likes {}
+.photo__likes {
+  font-weight: 700;
+
+  color: $text-main;
+}
