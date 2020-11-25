@@ -29,7 +29,7 @@ $bg-active: #d5d5d5;
 
 .form__row {
   display: grid;
-  grid-template-columns: min-height 1fr;
+  grid-template-columns: min-content 1fr;
 }
 
 .form__group-author {
