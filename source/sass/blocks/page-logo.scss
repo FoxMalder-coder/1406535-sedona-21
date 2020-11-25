@@ -13,9 +13,7 @@
 
   &::after,
   &::before {
-    position: absolute;
-    display: block;
-    content: "";
+    @include pseudo;
   }
 
   &::before {
