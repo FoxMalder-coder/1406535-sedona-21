@@ -6,11 +6,9 @@
 
 .copyright__text {
   margin: 0 10px;
-  line-height: 26px;
-  font-weight: 400;
-  text-transform: uppercase;
 
-  color: $text-main;
+  @include text(14px, 26px, 400, $text-main);
+  text-transform: uppercase;
 }
 
 .copyright__link {

@@ -65,10 +65,8 @@
 .benefits__title {
   margin: 0;
   padding: 0 0 20px;
-  font-size: 18px;
-  line-height: 26px;
-  font-weight: 700;
-  color: $text-main;
+
+  @include text(18px, 26px, 700, $text-main);
 
   @media (min-width: $width-tablet) {
     font-size: 21px;

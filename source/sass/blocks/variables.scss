@@ -16,8 +16,15 @@ $width-desktop: 1200px;
   padding: 0;
 }
 
-@mixin pseudo {
-  position: absolute;
-  display: block;
-  content: "";
+@mixin text($font-size, $line-height, $font-weight, $color) {
+  font-size: $font-size;
+  line-height: $line-height;
+  font-weight: $font-weight;
+  color: $color;
+}
+
+@mixin br-hide {
+  @media (max-width: $width-mobile-only) {
+    display: none;
+  }
 }

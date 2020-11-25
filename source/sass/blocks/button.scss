@@ -12,14 +12,15 @@ $text-disabled: #ffffff;
   width: 100%;
   min-height: 26px;
   padding: 16px 15px;
+
   font-family: inherit;
-  font-size: 21px;
-  line-height: 26px;
-  font-weight: 700;
+
+  @include text(21px, 26px, 700, $text-normal);
   text-align: center;
   text-decoration: none;
   text-transform: uppercase;
-  color: $text-normal;
+
+  // color: ;
   background-color: $bg-normal;
   border: 0;
 

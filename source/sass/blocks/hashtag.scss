@@ -1,8 +1,4 @@
 .hashtag {
-  font-size: 21px;
-  line-height: 26px;
-  font-weight: 700;
+  @include text(21px, 26px, 700, $text-main);
   text-transform: uppercase;
-
-  color: $text-main;
 }
