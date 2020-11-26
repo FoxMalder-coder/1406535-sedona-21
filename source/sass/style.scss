@@ -3,10 +3,8 @@
 
 // общие стили
 @import "global.scss";
-@import "blocks/button.scss";
-
-// общие переменные
 @import "blocks/variables.scss";
+@import "blocks/button.scss";
 
 // сетка всей страницы
 @import "blocks/page.scss";
@@ -29,6 +27,7 @@
 
 // Форма отзыва
 @import "blocks/form.scss";
+@import "blocks/modal.scss";
 
 // Галерея фото и видео
 @import "blocks/gallery.scss";

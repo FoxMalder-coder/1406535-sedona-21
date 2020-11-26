@@ -12,23 +12,33 @@
 }
 
 .features br {
-  @media (max-width: $width-mobile-only) {
-    display: none;
-  }
+  @include br-hide;
 }
 
 .features__item {
+  &:first-child .features__intro--accent {
+    padding-top: 71px;
+
+    @media (min-width: $width-mobile-only) {
+      padding: 15px 25px 25px;
+    }
+
+    @media (min-width: $width-tablet) {
+      padding: 40px 20px 0;
+    }
+  }
+
   &:last-child .features__text {
     border-bottom: 0;
   }
 
   @media (min-width: $width-mobile-only) {
-    margin: 5px 0;
+    padding: 5px 0;
     width: 50%;
   }
 
   @media (min-width: $width-tablet) {
-    margin: 0;
+    padding: 0;
     width: 33.333333333%;
   }
 }
@@ -101,11 +111,8 @@
 
 .features__title {
   margin: 0;
-  font-size: 18px;
-  line-height: 26px;
-  font-weight: 700;
 
-  color: $text-main;
+  @include text(18px, 26px, 700, $text-main);
 
   @media (min-width: $width-tablet) {
     font-size: 21px;

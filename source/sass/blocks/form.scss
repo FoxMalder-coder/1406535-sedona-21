@@ -2,37 +2,81 @@ $bg-normal: #f2f2f2;
 $bg-hover: #e5e5e5;
 $bg-active: #d5d5d5;
 
-// .form {}
-// .form__row {}
-// .form__group-author {}
+.form {
+  display: grid;
+  grid-template-areas:
+    "author"
+    "contacts"
+    "rating"
+    "places"
+    "comment"
+    "button";
 
-.form__group-author .form__row {
-  padding-top: 20px;
+  @media (min-width: $width-tablet) {
+    grid-template-areas:
+      "rating author"
+      "contacts contacts"
+      "places places"
+      "comment comment"
+      "button legend";
+    padding: 60px 7.8125%;
+  }
+
+  @media (min-width: $width-desktop) {
+    padding: 50px 10% 65px;
+  }
 }
 
-// .form__group-contacts {}
-
-.form__group-contacts .form__row {
-  padding-top: 14px;
+.form__row {
+  display: grid;
+  grid-template-columns: min-content 1fr;
 }
 
-// .form__group-rating {}
-// .form__group-places {}
-// .form__group-comment {}
+.form__group-author {
+  grid-area: author;
+}
 
+.form__group-contacts {
+  grid-area: contacts;
+
+  @media (min-width: $width-desktop) {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+.form__group-contacts .form_row {
+  grid-template-columns: 1fr;
+  grid-template-rows: min-content min-content;
+}
+
+.form__group-rating {
+  grid-area: rating;
+}
+
+.form__group-places {
+  grid-area: places;
+
+  @media (min-width: $width-tablet) {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+  }
+
+  @media (min-width: $width-desktop) {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+
+.form__group-comment {
+  grid-area: comment;
+}
 
 .form fieldset {
   margin: 0;
   padding: 20px;
   border: 0;
   border-top: 1px solid #e5e5e5;
-}
-
-.form input[placeholder] {
-  font-size: 18px;
-  line-height: 26px;
-  font-weight: 700;
-  color: red;
 }
 
 .form input[type="text"] {
@@ -56,7 +100,6 @@ $bg-active: #d5d5d5;
 }
 
 .form input[type="tel"] {
-  width: 100%;
   height: 58px;
   padding: 18px 22px 14px;
   background-color: $bg-normal;
@@ -77,7 +120,6 @@ $bg-active: #d5d5d5;
 }
 
 .form input[type="email"] {
-  width: 100%;
   height: 58px;
   padding: 18px 22px 14px;
   background-color: $bg-normal;
@@ -98,7 +140,7 @@ $bg-active: #d5d5d5;
 }
 
 .form__group-title {
-  width: 100%;
+  grid-column: 1 / -1;
 
   font-size: 18px;
   line-height: 26px;
@@ -127,10 +169,19 @@ $bg-active: #d5d5d5;
 }
 
 .form__legend {
-  font-size: 14px;
-  line-height: 26px;
-  font-weight: 400;
-  text-transform: uppercase;
+  display: none;
 
-  color: $text-additional;
+  @media (min-width: $width-tablet) {
+    grid-area: legend;
+    justify-self: end;
+    align-self: center;
+    display: block;
+    font-size: 14px;
+    line-height: 26px;
+    text-transform: uppercase;
+  }
+}
+
+.form__button {
+  grid-area: button;
 }

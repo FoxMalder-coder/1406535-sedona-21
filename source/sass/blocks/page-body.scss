@@ -6,9 +6,11 @@
   grid-template-rows: min-content 1fr min-content;
 
   font-family: "PT Sans", sans-serif;
-  font-size: 14px;
-  line-height: 21px;
-  font-weight: 400;
 
-  color: $text-additional;
+  @include text(14px, 21px, 400, $text-additional);
+
+  @media (min-width: $width-desktop) {
+    background-color: #ffffff;
+    box-shadow: 0 5px 15px rgba(1, 1, 1, 0.2);
+  }
 }

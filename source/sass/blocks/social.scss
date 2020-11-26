@@ -7,13 +7,14 @@ $bg-active: #5496bd;
 .social__list {
   @include fix-list;
   display: flex;
-  justify-content: space-between;
+  margin: -3px;
 }
 
 .social__item {
   display: flex;
   justify-content: center;
   align-items: center;
+  margin: 3px;
 }
 
 .social__link {

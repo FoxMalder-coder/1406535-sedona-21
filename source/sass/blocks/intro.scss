@@ -1,5 +1,10 @@
-// .intro {}
-// .intro__wrapper {}
+.intro {
+  position: relative;
+}
+
+.intro br {
+  @include br-hide;
+}
 
 .intro__logo {
   display: flex;
@@ -11,15 +16,98 @@
   background-image: url("../img/background-intro.jpg");
   background-repeat: no-repeat;
   background-position: top center;
+  background-size: cover;
 
-  &--main {
-    width: 100%;
-    min-height: 389px;
+  @media (min-width: $width-tablet) {
+    min-height: 290px;
+  }
+
+  @media (min-width: $width-desktop) {
+    min-height: 300px;
+  }
+}
+
+.intro__logo--main {
+  width: 100%;
+  min-height: 390px;
+
+  @media (min-width: $width-tablet) {
+    min-height: 518px;
   }
 }
 
 .intro__lead {
   background-color: #ffffff;
+
+  // &::before {
+  // content: "";
+  //   width: 100%;
+  //   height: 57px;
+  //   margin-top: -57px;
+  //   background-image: url("../img/intro-triangle.svg");
+  //   background-repeat: no-repeat;
+  //   background-position: top center;
+  //   background-size: 1200px 57px;
+  //   outline: 1px solid red;
+  // }
 }
-// .intro__slogan {}
-// .intro__text {}
+
+.intro__lead--main {
+  padding-top: 32px;
+  padding-bottom: 10px;
+
+  @media (min-width: $width-tablet) {
+    padding-top: 43.5px;
+    padding-bottom: 32.5px;
+  }
+
+  @media (min-width: $width-desktop) {
+    padding-top: 55px;
+    padding-bottom: 41px;
+  }
+  // &::after {
+  // content: "";
+  //   width: 100%;
+  //   height: 37px;
+  //   margin-bottom: 37px;
+  //   background-image: url("../img/intro-triangle-bottom.svg");
+  //   background-repeat: no-repeat;
+  //   background-position: bottom center;
+  //   background-size: 768px 37px;
+  //   outline: 1px solid red;
+  //
+  //   @media (min-width: $width-mobile-only) {
+  //     display: none;
+  //   }
+  // }
+}
+
+.intro__lead--form {
+  padding-top: 36px;
+  padding-bottom: 16px;
+
+  @media (min-width: $width-tablet) {
+    padding-top: 70px;
+    padding-bottom: 66.5px;
+  }
+
+  @media (min-width: $width-desktop) {
+    padding-top: 113px;
+    padding-bottom: 56.5px;
+  }
+}
+
+.intro__lead--catalog {
+  padding-top: 31px;
+  padding-bottom: 20px;
+
+  @media (min-width: $width-tablet) {
+    padding-top: 64px;
+    padding-bottom: 64px;
+  }
+
+  @media (min-width: $width-desktop) {
+    padding-top: 120px;
+    padding-bottom: 84px;
+  }
+}
