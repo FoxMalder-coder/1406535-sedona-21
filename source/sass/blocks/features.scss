@@ -11,15 +11,26 @@
   }
 }
 
+// Дополнительная отбивка сверху для "настоящий городок"
+.features__item:first-of-type .features__intro--accent {
+  padding-top: 70px;
+
+  @media (min-width: $width-mobile-only) {
+    padding-top: 42px;
+  }
+}
+
 .features br {
   @include br-hide;
 }
 
-.features__item {
-  &:last-child .features__text {
-    border-bottom: 0;
+.only-desktop {
+  @media (max-width: 1199px) {
+    @include br-hide;
   }
+}
 
+.features__item {
   @media (min-width: $width-mobile-only) {
     padding: 5px 0;
     width: 50%;
@@ -42,27 +53,50 @@
 
   @media (min-width: $width-tablet) {
     grid-template-columns: 1fr 1fr 1fr;
-    grid-template-rows: 256px min-content;
+    grid-template-rows: min-content min-content;
   }
 }
 
 .features__intro {
-  padding: 25px 20px 0;
+  position: relative;
+  padding: 25px 35px;
   background-color: $additional-color;
+
+  &::after {
+    position: absolute;
+    left: 6.25%;
+    bottom: 0;
+    content: "";
+    display: block;
+    width: 87.5%;
+    height: 1px;
+    background-color: #d6d6d6;
+
+    // Убираем линеечки при перестроении
+    @media (min-width: $width-mobile-only) {
+      display: none;
+    }
+  }
 
   @media (min-width: $width-mobile-only) {
     outline: 10px solid #ffffff;
+    min-height: 200px;
   }
 
   @media (min-width: $width-tablet) {
     outline: 0;
     min-height: 256px;
-    padding-top: 40px;
+    padding: 42px;
   }
 }
 
+// Убираем линеечку у последнего пункта
+.features__item:last-of-type .features__intro::after {
+  display: none;
+}
+
 .features__intro--accent {
-  position: relative;
+  padding: 39px 12.5px 37px;
   color: #ffffff;
   background-color: $main-color;
 
@@ -74,7 +108,12 @@
     border-bottom: 0;
   }
 
+  &::after {
+    display: none;
+  }
+
   @media (min-width: $width-mobile-only) {
+    padding: 42px 32px;
     grid-column: 2 / 3;
     grid-row: 1 / 2;
     z-index: 1;
@@ -83,6 +122,10 @@
 
   @media (min-width: $width-tablet) {
     grid-column: 1 / 2;
+  }
+
+  @media (min-width: $width-desktop) {
+    padding: 50px 60px;
   }
 }
 
@@ -111,18 +154,12 @@
   }
 
   @media (min-width: $width-tablet) {
-    margin: 20px 0 30px;
+    margin: 12.5px 0 22.5px;
   }
 }
 
 .features__text {
   margin: 0;
-  padding-bottom: 25px;
-  border-bottom: 1px solid #d6d6d6;
-
-  @media (min-width: $width-mobile-only) {
-    border-bottom: 0;
-  }
 }
 
 .features__image {

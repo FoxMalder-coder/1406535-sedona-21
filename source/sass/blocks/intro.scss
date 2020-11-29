@@ -4,6 +4,7 @@
 
 .intro--main {
   position: relative;
+  z-index: 1;
 
   &::after,
   &::before {
@@ -95,15 +96,11 @@
   padding: 32px 25px 11px;
 
   @media (min-width: $width-mobile-only) {
-    padding-top: 43.5px;
-    padding-bottom: 52.5px;
-    max-width: 560px;
-    margin: 0 auto;
+    padding: 43.5px 7.8125% 52.5px;
   }
 
   @media (min-width: $width-desktop) {
-    padding-top: 55px;
-    padding-bottom: 41px;
+    padding: 55px 10% 41px;
   }
 }
 
