@@ -1,0 +1,25 @@
+.header-logo {
+  position: relative;
+  z-index: 10;
+  width: 102px;
+  height: 84px;
+
+  &::before {
+    content: "";
+
+    @media (min-width: $width-desktop) {
+      position: absolute;
+      top: 0;
+      margin-left: -42.5px;
+      z-index: -1;
+      width: 187px;
+      height: 96.5px;
+      background-image: url("../img/header-logotype-desktop-background.svg");
+      background-size: 187px 96.5px;
+      background-repeat: no-repeat;
+      background-position: top center;
+    }
+  }
+}
+
+// .logo-header__image {}

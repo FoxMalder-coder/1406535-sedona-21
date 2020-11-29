@@ -14,9 +14,9 @@
 <body class="page-body">
 
   <header class="page-header">
-    <div class="page-header__wrapper">
-      <nav class="main-nav">
-        <button class="main-nav__toggle" type="button"><span class="visually-hidden">Открыть меню</span></button>
+    <nav class="main-nav main-nav--opened main-nav--nojs">
+      <button class="main-nav__toggle" type="button"><span class="visually-hidden">Открыть меню</span></button>
+      <div class="main-nav__wrapper">
         <ul class="main-nav__list">
           <li class="main-nav__item">
             <a class="main-nav__link main-nav__link--active">Главная</a>
@@ -31,28 +31,26 @@
             <a class="main-nav__link" href="https://htmlacademy.ru">HTML Academy</a>
           </li>
         </ul>
-        <div class="page-header__logo logo-header">
-          <a class="logo-header__image"><img src="img/header-logotype-mobile.svg" alt="Логотип «City of Sedona»"></a>
-        </div>
-      </nav>
-    </div>
+      </div>
+      <div class="main-nav__logo header-logo">
+        <a><img src="img/header-logotype-mobile.svg" alt="Логотип «City of Sedona»"></a>
+      </div>
+    </nav>
   </header>
 
   <main class="page-main">
 
     <h1 class="visually-hidden">Седона — классный туристический городок в Аризоне!</h1>
 
-    <div class="intro">
-      <div class="intro__wrapper">
-        <div class="intro__logo intro__logo--main">
-          <div class="page-logo page-logo--main">
-            <img src="img/page-logotype-main.svg" alt="Welcome to Sedona">
-          </div>
+    <div class="intro intro--main">
+      <div class="intro__logo intro__logo--main">
+        <div class="page-logo page-logo--main">
+          <img src="img/page-logotype-main.svg" alt="Welcome to Sedona">
         </div>
-        <div class="intro__lead intro__lead--main lead">
-          <b class="lead__slogan">Седона — небольшой городок в Аризоне,<br> заслуживающий большего!</b>
-          <p class="lead__text lead__text--expanded">Рассмотрим 5 причин, по которым Седона круче, чем Гранд Каньон!</p>
-        </div>
+      </div>
+      <div class="intro__lead intro__lead--main lead">
+        <b class="lead__slogan">Седона — небольшой городок в Аризоне,<br> заслуживающий большего!</b>
+        <p class="lead__text lead__text--expanded">Рассмотрим 5 причин, по которым Седона круче, чем Гранд Каньон!</p>
       </div>
     </div>
 
@@ -154,6 +152,23 @@
       <a class="copyright__link" href="https://htmlacademy.ru/intensive/adaptive" aria-label="HTML Academy"></a>
     </div>
   </footer>
+
+  <script>
+    var navMain = document.querySelector('.main-nav');
+    var navToggle = document.querySelector('.main-nav__toggle');
+
+    navMain.classList.remove('main-nav--nojs');
+
+    navToggle.addEventListener('click', function() {
+      if (navMain.classList.contains('main-nav--closed')) {
+        navMain.classList.remove('main-nav--closed');
+        navMain.classList.add('main-nav--opened');
+      } else {
+        navMain.classList.add('main-nav--closed');
+        navMain.classList.remove('main-nav--opened');
+      }
+    });
+  </script>
 
 </body>
 
