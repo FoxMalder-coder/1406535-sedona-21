@@ -18,7 +18,7 @@
 
 .features__intro {
   position: relative;
-  padding: 25px 35px;
+  padding: 26px 35px;
   background-color: $additional-color;
 
   &::after {
@@ -127,16 +127,16 @@
 .features__item--even .features__intro--accent {
   overflow: hidden;
   padding-top: 39px;
-  padding-bottom: 35px;
+  padding-bottom: 37px;
 
   &::after {
     content: "";
     display: block;
     width: 100vw;
     height: 260px;
-    margin: 0 -12.5px;
+    margin: 0 -13px;
     position: relative;
-    top: 35px;
+    top: 37px;
     left: 0;
     background-image: url("../img/photo-bridge@1x.jpg");
     background-repeat: no-repeat;
@@ -208,6 +208,10 @@
 
 .features__text {
   margin: 0;
+
+  @media (min-width: $width-tablet) {
+    line-height: 22px;
+  }
 }
 
 // Реверсный текст на акцентных блоках
@@ -218,7 +222,7 @@
 }
 
 .features__description {
-  padding: 24px 35px 35px 15px;
+  padding: 25px 35px 36px 15px;
 
   @media (min-width: $width-mobile-only) {
     padding: 60px 0;

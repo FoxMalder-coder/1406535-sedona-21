@@ -1,7 +1,7 @@
 .search {
   text-transform: uppercase;
   text-align: center;
-  padding: 34px 20px 49px;
+  padding: 31px 20px 49px;
 
   @media (min-width: $width-mobile-only) {
     width: 458px;
@@ -9,7 +9,7 @@
   }
 
   @media (min-width: $width-tablet) {
-    padding: 59px 0;
+    padding: 57px 0;
   }
 
   @media (min-width: $width-desktop) {
@@ -36,10 +36,10 @@
 }
 
 .search__button {
-  margin-top: 27px;
+  margin-top: 28px;
 
   @media (min-width: $width-mobile-only) {
-    margin-top: 37px;
+    margin-top: 38px;
   }
 
   @media (min-width: $width-desktop) {

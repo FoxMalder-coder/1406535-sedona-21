@@ -9,11 +9,11 @@
   &::after,
   &::before {
     position: absolute;
-    bottom: -36.5px;
+    bottom: -37px;
     display: block;
     content: "";
     width: 384px;
-    height: 37px;
+    height: 38px;
     background-image: url("../img/intro-triangle-bottom.svg");
     background-repeat: no-repeat;
 
@@ -69,7 +69,7 @@
   &::before,
   &::after {
     position: absolute;
-    top: -56.5px;
+    top: -56px;
     display: block;
     content: "";
     width: 600px;

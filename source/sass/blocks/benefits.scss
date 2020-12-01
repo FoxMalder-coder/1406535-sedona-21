@@ -37,7 +37,7 @@
 .benefits__item--house {
   background-image: url("../img/icon-house.svg");
   background-size: 39px 37px;
-  background-position: 5px 3px;
+  background-position: 5px 0;
 
   @media (min-width: $width-mobile-only) {
     background-position: top center;
@@ -91,4 +91,8 @@
 
 .benefits__text {
   margin: 0;
+
+  @media (min-width: $width-tablet) {
+    line-height: 22px;
+  }
 }
