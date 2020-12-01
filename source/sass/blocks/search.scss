@@ -1,7 +1,7 @@
-// .search {}
-
-.search__wrapper {
-  padding: 33px 20px 49px;
+.search {
+  text-transform: uppercase;
+  text-align: center;
+  padding: 34px 20px 49px;
 
   @media (min-width: $width-mobile-only) {
     width: 458px;
@@ -9,11 +9,29 @@
   }
 
   @media (min-width: $width-tablet) {
-    padding: 58px 0;
+    padding: 59px 0;
   }
 
   @media (min-width: $width-desktop) {
     padding-bottom: 66px;
+  }
+}
+
+// .search__lead {}
+.search__slogan {
+  @include text(21px, 26px, 700, $text-main);
+
+  @media (min-width: $width-tablet) {
+    font-size: 30px;
+  }
+}
+
+.search__text {
+  @include text(14px, 24px, 400, $text-additional);
+  margin: 21px 0 0;
+
+  @media (min-width: $width-tablet) {
+    margin-top: 28px;
   }
 }
 

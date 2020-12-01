@@ -111,7 +111,7 @@ $text-active: rgba(255, 255, 255, 0.3);
 
 .main-nav__item {
   width: 100%;
-  min-height: 55px;
+  min-height: 56px;
   text-align: center;
   background-color: $bg-normal;
   border-top: 1px solid rgba(255, 255, 255, 0.2);
@@ -167,7 +167,7 @@ $text-active: rgba(255, 255, 255, 0.3);
   text-transform: uppercase;
   width: auto;
   display: block;
-  padding: 7.5px 12px;
+  padding: 7.25px 12px;
 
   &:hover {
     @media (min-width: $width-tablet) {

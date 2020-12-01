@@ -1,0 +1,43 @@
+.intro__lead--form {
+  padding: 36px;
+  padding-bottom: 16px;
+
+  @media (min-width: $width-mobile-only) {
+    padding-top: 70px;
+    padding-bottom: 66.5px;
+  }
+
+  @media (min-width: $width-desktop) {
+    padding-top: 113px;
+    padding-bottom: 56.5px;
+  }
+}
+
+.lead {
+  text-transform: uppercase;
+  text-align: center;
+}
+
+.lead__slogan {
+  margin-bottom: 35px;
+
+  @include text(18px, 26px, 700, $text-main);
+
+  &--larger {
+    font-size: 21px;
+
+    @media (min-width: $width-tablet) {
+      font-size: 30px;
+    }
+  }
+}
+
+.lead__text {
+  margin: 20px 0 0;
+
+  line-height: 24px;
+
+  &--expanded {
+    line-height: 26px;
+  }
+}

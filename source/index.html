@@ -14,7 +14,7 @@
 <body class="page-body">
 
   <header class="page-header">
-    <nav class="main-nav main-nav--opened main-nav--nojs">
+    <nav class="main-nav main-nav--closed main-nav--nojs">
       <button class="main-nav__toggle" type="button"><span class="visually-hidden">Открыть меню</span></button>
       <div class="main-nav__wrapper">
         <ul class="main-nav__list">
@@ -33,7 +33,13 @@
         </ul>
       </div>
       <div class="main-nav__logo header-logo">
-        <a><img src="img/header-logotype-mobile.svg" alt="Логотип «City of Sedona»"></a>
+        <a>
+          <picture>
+            <source media="(min-width: 1200px)" srcset="img/header-logotype-desktop.svg">
+            <source media="(min-width: 768px)" srcset="img/header-logotype-tablet.svg">
+            <img src="img/header-logotype-mobile.svg" width="102" height="84" alt="Логотип «City of Sedona»">
+          </picture>
+        </a>
       </div>
     </nav>
   </header>
@@ -48,23 +54,20 @@
           <img src="img/page-logotype-main.svg" alt="Welcome to Sedona">
         </div>
       </div>
-      <div class="intro__lead intro__lead--main lead">
-        <b class="lead__slogan">Седона — небольшой городок в Аризоне,<br> заслуживающий большего!</b>
-        <p class="lead__text lead__text--expanded">Рассмотрим 5 причин, по которым Седона круче, чем Гранд Каньон!</p>
+      <div class="intro__lead lead-main">
+        <b class="lead-main__slogan">Седона — небольшой городок в Аризоне,<br class="break-non-mobile"> заслуживающий большего!</b>
+        <p class="lead-main__text">Рассмотрим 5 причин, по которым Седона круче, чем Гранд Каньон!</p>
       </div>
     </div>
 
     <section class="feature">
       <h2 class="visually-hidden">Преимущества</h2>
       <ul class="features">
-        <li class="features__item features__item--extended">
+        <li class="features__item features__item--odd">
           <div class="features__intro features__intro--accent">
-            <h3 class="features__title">Настоящий <br>городок</h3>
-            <span class="features__number">— №1 —</span>
-            <p class="features__text">Седона не аттракцион для туристов, там течет своя жизнь</p>
-          </div>
-          <div class="features__image">
-            <img src="img/photo-city@1x.jpg" width="520" height="260" alt="Город Седона, Аризона">
+            <h3 class="features__title features__title--accent">Настоящий <br class="break-non-mobile">городок</h3>
+            <span class="features__number features__number--accent">— №1 —</span>
+            <p class="features__text features__text--accent">Седона не аттракцион для туристов, там течет своя жизнь</p>
           </div>
           <ul class="features__description benefits">
             <li class="benefits__item benefits__item--house">
@@ -73,41 +76,38 @@
             </li>
             <li class="benefits__item benefits__item--gift">
               <h4 class="benefits__title">Сувениры</h4>
-              <p class="benefits__text">Не только китайского, но и местного производства!</p>
+              <p class="benefits__text">Не только китайского, <br class="break-desktop-only">но и местного производства!</p>
             </li>
             <li class="benefits__item benefits__item--food">
               <h4 class="benefits__title">Еда</h4>
-              <p class="benefits__text">Всегда заказывайте фирменный бургер, вы не разочаруетесь!</p>
+              <p class="benefits__text">Всегда заказывайте фирменный бургер, <br class="break-non-mobile">вы не разочаруетесь!</p>
             </li>
           </ul>
         </li>
-        <li class="features__item features__item--extended">
-          <div class="features__intro features__intro--accent features__intro--reversed-order">
-            <h3 class="features__title">Там есть <br>Мост Дьявола</h3>
-            <span class="features__number">— №2 —</span>
-            <p class="features__text">Да, по нему можно пройти! <br class="only-desktop">Если вы осмелитесь, конечно</p>
-          </div>
-          <div class="features__image features__image--reversed-order">
-            <img src="img/photo-bridge@1x.jpg" width="520" height="260" alt="Мост Дьявола, Седона">
+        <li class="features__item features__item--even">
+          <div class="features__intro features__intro--accent">
+            <h3 class="features__title features__title--accent">Там есть <br class="break-non-mobile">Мост Дьявола</h3>
+            <span class="features__number features__number--accent">— №2 —</span>
+            <p class="features__text features__text--accent">Да, по нему можно пройти! <br class="break-desktop-only">Если вы осмелитесь, конечно</p>
           </div>
         </li>
         <li class="features__item">
           <div class="features__intro">
-            <h3 class="features__title">Небольшая <br>площадь</h3>
+            <h3 class="features__title">Небольшая <br class="break-non-mobile">площадь</h3>
             <span class="features__number">— №3 —</span>
             <p class="features__text">Все интересные места находятся очень близко</p>
           </div>
         </li>
         <li class="features__item">
           <div class="features__intro">
-            <h3 class="features__title">Красивая <br>дорога</h3>
+            <h3 class="features__title">Красивая <br class="break-non-mobile">дорога</h3>
             <span class="features__number">— №4 —</span>
             <p class="features__text">Ехать в Седону из Лас-Вегаса совсем не&nbsp;скучно!</p>
           </div>
         </li>
         <li class="features__item">
           <div class="features__intro">
-            <h3 class="features__title">Мало <br>туристов</h3>
+            <h3 class="features__title">Мало <br class="break-non-mobile">туристов</h3>
             <span class="features__number">— №5 —</span>
             <p class="features__text">Большинство едет в Гранд Каньон и толпится там</p>
           </div>
@@ -117,19 +117,18 @@
 
     <section class="search">
       <h2 class="visually-hidden">Форма поиска гостиницы</h2>
-      <div class="search__wrapper">
-        <div class="lead">
-          <b class="lead__slogan lead__slogan--larger">Заинтересовались?</b>
-          <p class="lead__text">Укажите предполагаемые даты поездки, <br> и мы покажем вам лучшие предложения гостиниц в Седоне</p>
-        </div>
-        <a class="search__button button" href="#">Найти гостиницу</a>
+      <div class="search__lead">
+        <b class="search__slogan">Заинтересовались?</b>
+        <p class="search__text">Укажите предполагаемые даты поездки, <br class="break-non-mobile">и мы покажем вам лучшие предложения гостиниц в Седоне</p>
       </div>
+      <a class="search__button button" href="#">Найти гостиницу</a>
     </section>
 
-    <!-- <section class="map">
-
-    </section> -->
-
+    <div class="map">
+      <iframe
+        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d13093.810511100173!2d-111.7653084029587!3d34.86997871936379!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x872da1c0887cfcab%3A0x58ca19c5d9e35561!2sSedona!5e0!3m2!1sru!2sus!4v1606718300331!5m2!1sru!2sus"
+        width="1200" height="350" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
+    </div>
   </main>
 
   <footer class="page-footer">

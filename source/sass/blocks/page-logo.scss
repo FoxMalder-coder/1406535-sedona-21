@@ -17,8 +17,8 @@
 
 .page-logo--main {
   width: 282px;
-  height: 214px;
-  padding: 80px 0;
+  height: 210px;
+  padding: 83px 0;
   object-fit: contain;
 
   @media (min-width: $width-tablet) {
@@ -50,8 +50,8 @@
   }
 
   &::after {
-    bottom: 0;
-    left: (282px - 180px) / 2;
+    bottom: -4px;
+    left: (282px - 180px) / 2 - 5px;
     width: 180px;
     height: 48px;
     background-image: url("../img/page-logotype-after.svg");

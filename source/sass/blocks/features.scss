@@ -5,55 +5,14 @@
   text-transform: uppercase;
 
   @media (min-width: $width-mobile-only) {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-  }
-}
-
-// Дополнительная отбивка сверху для "настоящий городок"
-.features__item:first-of-type .features__intro--accent {
-  padding-top: 70px;
-
-  @media (min-width: $width-mobile-only) {
-    padding-top: 42px;
-  }
-}
-
-.features br {
-  @include br-hide;
-}
-
-.only-desktop {
-  @media (max-width: 1199px) {
-    @include br-hide;
-  }
-}
-
-.features__item {
-  @media (min-width: $width-mobile-only) {
-    padding: 5px 0;
-    width: 50%;
+    width: $width-mobile-only;
+    margin: 0 auto;
   }
 
   @media (min-width: $width-tablet) {
-    padding: 0;
-    width: 33.333333333%;
-  }
-}
-
-.features__item--extended {
-  width: 100%;
-
-  @media (min-width: $width-mobile-only) {
+    width: 100%;
     display: grid;
-    grid-template-columns: 20px 225px 1fr;
-    grid-template-rows: min-content min-content min-content;
-  }
-
-  @media (min-width: $width-tablet) {
-    grid-template-columns: 1fr 1fr 1fr;
-    grid-template-rows: min-content min-content;
+    grid-template-columns: repeat(3, 1fr);
   }
 }
 
@@ -73,65 +32,154 @@
     background-color: #d6d6d6;
 
     // Убираем линеечки при перестроении
-    @media (min-width: $width-mobile-only) {
+    @media (min-width: $width-tablet) {
       display: none;
     }
   }
 
   @media (min-width: $width-mobile-only) {
-    outline: 10px solid #ffffff;
-    min-height: 200px;
+    padding: 25px;
   }
 
   @media (min-width: $width-tablet) {
-    outline: 0;
     min-height: 256px;
-    padding: 42px;
-  }
-}
-
-// Убираем линеечку у последнего пункта
-.features__item:last-of-type .features__intro::after {
-  display: none;
-}
-
-.features__intro--accent {
-  padding: 39px 12.5px 37px;
-  color: #ffffff;
-  background-color: $main-color;
-
-  .features__title {
-    color: #ffffff;
-  }
-
-  .features__text {
-    border-bottom: 0;
-  }
-
-  &::after {
-    display: none;
-  }
-
-  @media (min-width: $width-mobile-only) {
-    padding: 42px 32px;
-    grid-column: 2 / 3;
-    grid-row: 1 / 2;
-    z-index: 1;
-    outline: 0;
-  }
-
-  @media (min-width: $width-tablet) {
-    grid-column: 1 / 2;
+    padding: 42px 50px;
   }
 
   @media (min-width: $width-desktop) {
-    padding: 50px 60px;
+    padding-left: 54px;
+    padding-right: 54px;
   }
 }
 
-.features__intro--reversed-order {
+.features__intro--accent {
+  padding-left: 13px;
+  padding-right: 13px;
+  background-color: $main-color;
+
+
   @media (min-width: $width-tablet) {
-    grid-column: -1 / -2;
+    padding-left: 32px;
+    padding-right: 32px;
+  }
+
+  @media (min-width: $width-desktop) {
+    padding-left: 52px;
+    padding-right: 52px;
+  }
+}
+
+.features__item--odd,
+.features__item--even {
+  @media (min-width: $width-mobile-only) {
+    grid-column: 1 / -1;
+  }
+}
+
+.features__item--odd .features__intro--accent {
+  position: relative;
+  // Больший отступ у самого первого элемента (из-за стрелки)
+  padding-top: 71px;
+  padding-bottom: 40px;
+  overflow: hidden;
+
+  &::after {
+    content: "";
+    display: block;
+    width: 100vw;
+    height: 260px;
+    margin: 0 -13px;
+    position: relative;
+    top: 40px;
+    left: 0;
+    background-image: url("../img/photo-city@1x.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: 50% 50%;
+
+    @media (min-width: $width-tablet) {
+      display: none;
+    }
+  }
+
+  @media (min-width: $width-mobile-only) {
+    padding-top: 40px;
+    padding-bottom: 40px;
+  }
+
+  @media (min-width: $width-tablet) {
+    padding-right: calc(66.67% + 32px);
+    padding-left: 32px;
+    background-image: url("../img/photo-city@1x.jpg");
+    background-repeat: no-repeat;
+    background-size: 66.67% auto;
+    background-position: top right;
+  }
+
+  @media (min-width: $width-desktop) {
+    padding-top: 48px;
+    padding-bottom: 48px;
+    padding-right: calc(66.67% + 60px);
+    padding-left: 60px;
+  }
+}
+
+.features__item--even .features__intro--accent {
+  overflow: hidden;
+  padding-top: 39px;
+  padding-bottom: 35px;
+
+  &::after {
+    content: "";
+    display: block;
+    width: 100vw;
+    height: 260px;
+    margin: 0 -12.5px;
+    position: relative;
+    top: 35px;
+    left: 0;
+    background-image: url("../img/photo-bridge@1x.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: 50% 50%;
+
+    @media (min-width: $width-tablet) {
+      display: none;
+    }
+  }
+
+  @media (min-width: $width-tablet) {
+    padding-top: 42px;
+    padding-bottom: 42px;
+    padding-left: calc(66.67% + 36px);
+    padding-right: 36px;
+    background-image: url("../img/photo-bridge@1x.jpg");
+    background-repeat: no-repeat;
+    background-size: 66.67% auto;
+    background-position: top left;
+  }
+
+  @media (min-width: $width-desktop) {
+    padding-top: 52px;
+    padding-bottom: 52px;
+    padding-left: calc(66.67% + 60px);
+    padding-right: 60px;
+  }
+}
+
+
+// Убираем линеейки у последнего элемента и у акцентных элементов
+.features__item:last-child .features__intro,
+.features__intro--accent {
+  &::after {
+    display: none;
+  }
+}
+
+.features__item:nth-last-child(3) .features__intro {
+  @media (min-width: $width-tablet) {
+    padding-right: 35px;
+    padding-left: 35px;
   }
 }
 
@@ -147,7 +195,7 @@
 
 .features__number {
   display: block;
-  margin: 20px 0 25px;
+  margin: 11px 0 17px;
 
   @media (min-width: $width-mobile-only) {
     margin: 10px 0;
@@ -162,47 +210,21 @@
   margin: 0;
 }
 
-.features__image {
-  width: 100%;
-  height: 260px;
-
-  img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-  }
-
-  @media (min-width: $width-mobile-only) {
-    height: 100%;
-    max-height: 400px;
-    grid-column: 1 / -1;
-    grid-row: 1 / 3;
-  }
-
-  @media (min-width: $width-tablet) {
-    grid-column: -3 / -1;
-    height: 256px;
-  }
-}
-
-.features__image--reversed-order {
-  @media (min-width: $width-tablet) {
-    grid-column: 1 / 3;
-  }
+// Реверсный текст на акцентных блоках
+.features__title--accent,
+.features__number--accent,
+.features__text--accent {
+  color: #ffffff;
 }
 
 .features__description {
-  padding: 35px 20px;
+  padding: 24px 35px 35px 15px;
 
   @media (min-width: $width-mobile-only) {
-    grid-column: 1 / -1;
-  }
-
-  @media (min-width: $width-tablet) {
-    padding: 55px 0;
+    padding: 60px 0;
   }
 
   @media (min-width: $width-desktop) {
-    padding-bottom: 80px;
+    padding-bottom: 82px;
   }
 }
