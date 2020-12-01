@@ -49,14 +49,13 @@
 
 .photo__caption {
   display: grid;
-  align-items: center; //Почему-то не работает выравнивание
-  padding: 10px 0 20px;
+  padding: 10px 0 19.5px;
 
   @media (min-width: $width-mobile-only) {
     background-color: #f2f2f2;
-    padding: 16px 20px;
-    grid-template-columns: 1fr 70px;
-    grid-column-gap: 20px;
+    padding: 16px 19.5px;
+    grid-template-columns: 1fr 65px;
+    grid-column-gap: 10px;
   }
 
   @media (min-width: $width-desktop) {
@@ -70,6 +69,9 @@
 .photo__title {
   margin: 0;
   text-transform: uppercase;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 
 .photo__author {
@@ -84,13 +86,13 @@
 
 .photo__likes {
   display: flex;
+  align-items: center;
   margin-top: 10px;
 
   @media (min-width: $width-mobile-only) {
     margin-top: 0;
     grid-column: 2 / -1;
-    grid-row: 1 / -1;
-    align-self: center; //Почему-то не работает выравнивание
+    grid-row: 1 / 3;
   }
 }
 

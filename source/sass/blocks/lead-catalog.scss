@@ -1,3 +1,18 @@
+.intro__lead--catalog {
+  padding-top: 31px;
+  padding-bottom: 20px;
+
+  @media (min-width: $width-mobile-only) {
+    padding-top: 64px;
+    padding-bottom: 64px;
+  }
+
+  @media (min-width: $width-desktop) {
+    padding-top: 120px;
+    padding-bottom: 84px;
+  }
+}
+
 .lead {
   text-transform: uppercase;
   text-align: center;

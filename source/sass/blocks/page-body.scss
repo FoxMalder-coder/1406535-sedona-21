@@ -1,11 +1,12 @@
 .page-body {
   min-height: 100%;
+  min-width: 320px;
   max-width: $width-desktop;
   margin: 0 auto;
   display: grid;
   grid-template-rows: min-content 1fr min-content;
 
-  font-family: "PT Sans", sans-serif;
+  font-family: "PT Sans", "Tahoma", sans-serif;
 
   @include text(14px, 21px, 400, $text-additional);
 

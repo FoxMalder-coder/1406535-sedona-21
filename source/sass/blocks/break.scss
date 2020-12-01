@@ -1,0 +1,15 @@
+.break-non-mobile {
+  @media (max-width: 767px) {
+    display: none;
+  }
+}
+
+// .break-tablet-only {}
+
+.break-desktop-only {
+  display: none;
+
+  @media (min-width: $width-desktop) {
+    display: block;
+  }
+}

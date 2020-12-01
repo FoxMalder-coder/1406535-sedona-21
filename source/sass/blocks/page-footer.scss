@@ -1,6 +1,6 @@
 .page-footer {
   width: 100%;
-  padding: 28px 0 23px;
+  padding: 34px 0 23px;
   justify-self: center;
   align-self: center;
   display: grid;
@@ -14,11 +14,12 @@
   @media (min-width: $width-tablet) {
     grid-template-areas: "hashtag social copyright";
     grid-template-columns: 1fr min-content 1fr;
-    padding: 36px 7.8125%;
+    padding: 32px 7.8125%;
   }
 
   @media (min-width: $width-desktop) {
-    padding: 36px 10%;
+    padding-left: 10%;
+    padding-right: 10%;
   }
 }
 
@@ -43,8 +44,10 @@
 
 .page-footer__copyright {
   grid-area: copyright;
+  padding-right: 5px;
 
   @media (min-width: $width-tablet) {
     justify-self: end;
+    padding-right: 0;
   }
 }
