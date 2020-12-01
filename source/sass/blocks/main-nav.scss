@@ -128,16 +128,6 @@ $text-active: rgba(255, 255, 255, 0.3);
     }
   }
 
-  &:nth-of-type(2) {
-    @media (min-width: $width-tablet) {
-      margin-right: 156px;
-    }
-
-    @media (min-width: $width-desktop) {
-      margin-right: 245px;
-    }
-  }
-
   &:hover {
     background-color: $bg-hover;
 
@@ -162,12 +152,22 @@ $text-active: rgba(255, 255, 255, 0.3);
   }
 }
 
+.main-nav__item--logo-hole {
+  @media (min-width: $width-tablet) {
+    margin-right: 156px;
+  }
+
+  @media (min-width: $width-desktop) {
+    margin-right: 245px;
+  }
+}
+
 .main-nav__link {
   @include text(18px, 40px, 700, #ffffff);
   text-transform: uppercase;
   width: auto;
   display: block;
-  padding: 7px 12px;
+  padding: 7px;
 
   &:hover {
     @media (min-width: $width-tablet) {
