@@ -1,2 +1,142 @@
 // .modal {}
 // .modal__wrapper {}
+
+// Модальное окно
+.modal {
+  opacity: 0; // Прячем
+  // background-color: rgba(0, 0, 0, 0.7); // Затемняет всё вокруг
+  pointer-events: none;
+  position: fixed; //
+  top: 0; //
+  right: 0; // Задаем область - весь экран
+  bottom: 0; //
+  left: 0; //
+  z-index: 9999;
+  margin: 0;
+  padding: 0;
+  transition: all 0.5s ease; // Сглаживаем переходы
+}
+
+.modal:target {
+  opacity: 1; // Показывеем при нажатии на ссылку модального окна (здесь кнопка "отправить отзыв")
+  pointer-events: auto;
+  // overflow-y: auto;
+}
+
+// Центруем содержимое модального окна
+.modal__wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.modal__inner {
+  position: relative;
+  display: grid;
+  grid-template-areas:
+    "text"
+    "button";
+  align-items: center;
+  width: 100%;
+  background-color: #ffffff;
+  box-shadow: 0 7px 15px rgba(0, 1, 1, 0.15);
+}
+
+.modal__button {
+  grid-area: button;
+}
+
+.modal__slogan {
+  @include text(18px, 26px, 700, $text-main);
+
+  @media (min-width: $width-tablet) {
+    font-size: 30px;
+    line-height: 40px;
+  }
+}
+
+.modal__text {
+  @include text(14px, 24px, 400, $text-additional);
+  margin: 35px 0 0;
+}
+
+.modal__intro {
+  grid-area: text;
+  text-transform: uppercase;
+  text-align: center;
+  padding: 40px;
+}
+
+.modal__inner--error {
+  grid-template-rows:
+    min-content
+    93px;
+  max-width: 400px;
+
+  @media (min-width: $width-tablet) {
+    grid-template-rows:
+      min-content
+      107px;
+  }
+}
+
+.modal__inner--error .modal__intro {
+  padding-bottom: 25px;
+
+  @media (min-width: $width-tablet) {
+    padding-left: 60px;
+    padding-right: 60px;
+    padding-bottom: 55px;
+  }
+}
+
+.modal__inner--error .modal__button {
+  align-self: start;
+  width: 180px;
+  margin: 0 auto;
+
+  @media (min-width: $width-tablet) {
+    width: 272px;
+  }
+}
+
+.modal__inner--success {
+  grid-template-rows:
+    min-content
+    98px;
+  max-width: 640px;
+
+  @media (min-width: $width-tablet) {
+    grid-template-rows:
+      min-content
+      146px;
+  }
+}
+
+.modal__inner--success .modal__intro {
+  padding-bottom: 50px;
+
+  @media (min-width: $width-mobile-only) {
+    padding-left: 90px;
+    padding-right: 90px;
+  }
+}
+
+.modal__inner--success .modal__button {
+  padding: 20px;
+  background-color: #f2f2f2;
+
+  @media (min-width: $width-tablet) {
+    padding: 44px;
+  }
+}
+
+.modal__inner--success .button {
+  width: 280px;
+  margin: auto;
+
+  @media (min-width: $width-tablet) {
+    width: 458px;
+  }
+}
