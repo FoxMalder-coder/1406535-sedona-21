@@ -1,14 +1,14 @@
 .lead-form {
   text-transform: uppercase;
   text-align: center;
-  padding: 36px 20px 16px;
+  padding: 36px 20px 17px;
 
   @media (min-width: $width-tablet) {
-    padding: 65px 7.8125% 75px;
+    padding: 65px 7.8125% 25px;
   }
 
   @media (min-width: $width-desktop) {
-    padding: 113px 10% 55px;
+    padding: 113px 10% 7px;
   }
 }
 
@@ -22,5 +22,5 @@
 
 .lead-form__text {
   @include text(14px, 24px, 400, $text-additional);
-  margin: 35px 0 0;
+  margin: 30px 0 0;
 }

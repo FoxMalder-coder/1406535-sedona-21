@@ -45,6 +45,14 @@
 
 .modal__button {
   grid-area: button;
+
+  .button {
+    font-size: 18px;
+
+    @media (min-width: $width-tablet) {
+      font-size: 21px;
+    }
+  }
 }
 
 .modal__slogan {
@@ -58,7 +66,7 @@
 
 .modal__text {
   @include text(14px, 24px, 400, $text-additional);
-  margin: 35px 0 0;
+  margin: 25px 0 0;
 }
 
 .modal__intro {
@@ -82,12 +90,14 @@
 }
 
 .modal__inner--error .modal__intro {
+  padding-left: 55px;
+  padding-right: 55px;
   padding-bottom: 25px;
 
   @media (min-width: $width-tablet) {
     padding-left: 60px;
     padding-right: 60px;
-    padding-bottom: 55px;
+    padding-bottom: 35px;
   }
 }
 
@@ -115,8 +125,6 @@
 }
 
 .modal__inner--success .modal__intro {
-  padding-bottom: 50px;
-
   @media (min-width: $width-mobile-only) {
     padding-left: 90px;
     padding-right: 90px;
