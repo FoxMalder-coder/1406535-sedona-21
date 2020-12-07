@@ -1,0 +1,83 @@
+.clip {
+  //
+}
+
+.clip__video {
+  display: none;
+}
+
+.clip__video-preview {
+  max-width: 440px;
+  height: auto;
+  margin: 0 auto;
+
+  @media (min-width: $width-tablet) {
+    width: 100%;
+    max-width: 800px;
+    height: 500px;
+  }
+}
+
+.clip__video-preview img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.clip__controls {
+  position: relative;
+  display: flex;
+  flex-wrap: wrap;
+  z-index: 10;
+  height: 111px;
+  margin: -45px 20px 0;
+  outline: 2px solid red;
+  outline-offset: -2px;
+
+  @media (min-width: $width-tablet) {
+    justify-content: space-between;
+    height: 93px;
+    margin: -93px 0 0;
+    background-color: rgba(0, 0, 0, 0.6);
+  }
+}
+
+.clip__progress-bar {
+  width: 100%;
+  border: 0;
+
+  @media (min-width: $width-tablet) {
+    width: auto;
+  }
+}
+
+.clip__buttons {
+  width: 100%;
+  height: 66px;
+  background-color: #f2f2f2;
+
+  @media (min-width: $width-tablet) {
+    display: contents;
+  }
+}
+
+.clip__button {
+  background-color: transparent;
+  outline: 0;
+  border: 0;
+}
+
+.clip__button--replay {
+  @media (min-width: $width-tablet) {
+    order: -1;
+  }
+}
+
+.clip__button--subtitle {
+  // grid-area: subtitle;
+}
+
+.clip__button--fullscreen {
+  // grid-area: fullscreen;
+}

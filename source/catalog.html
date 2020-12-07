@@ -5,22 +5,22 @@
   <meta charset="utf-8">
   <title>HTML Academy: Седона</title>
   <meta name="viewport" content="width=devoce-width, initial-scale=1">
-  <link rel="preconnect" href="https://fonts.gstatic.com">
-  <link href="https://fonts.googleapis.com/css2?family=PT+Sans:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="preload" href="fonts/ptsans.woff2" as="font" type="font/woff2" crossorigin="anonymous">
+  <link rel="preload" href="fonts/ptsansbold.woff2" as="font" type="font/woff2" crossorigin="anonymous">
   <link rel="stylesheet" href="css/style.css">
 </head>
 
 <body class="page-body">
 
   <header class="page-header">
-    <div class="page-header__wrapper">
-      <nav class="main-nav">
-        <button class="main-nav__toggle" type="button"><span class="visually-hidden">Открыть меню</span></button>
+    <nav class="main-nav main-nav--closed main-nav--nojs">
+      <button class="main-nav__toggle" type="button"><span class="visually-hidden">Открыть меню</span></button>
+      <div class="main-nav__wrapper">
         <ul class="main-nav__list">
           <li class="main-nav__item">
             <a class="main-nav__link" href="index.html">Главная</a>
           </li>
-          <li class="main-nav__item">
+          <li class="main-nav__item main-nav__item--logo-hole">
             <a class="main-nav__link main-nav__link--active">Фото и видео</a>
           </li>
           <li class="main-nav__item">
@@ -30,11 +30,17 @@
             <a class="main-nav__link" href="https://htmlacademy.ru">HTML Academy</a>
           </li>
         </ul>
-        <div class="page-header__logo logo-header">
-          <a class="logo-header__image" href="index.html"><img src="img/header-logotype-mobile.svg" alt="Логотип «City of Sedona»"></a>
-        </div>
-      </nav>
-    </div>
+      </div>
+      <div class="main-nav__logo header-logo">
+        <a class="logo-header__image" href="index.html">
+          <picture>
+            <source media="(min-width: 1200px)" srcset="img/header-logotype-desktop.svg">
+            <source media="(min-width: 768px)" srcset="img/header-logotype-tablet.svg">
+            <img src="img/header-logotype-mobile.svg" width="102" height="84" alt="Логотип «City of Sedona»">
+          </picture>
+        </a>
+      </div>
+    </nav>
   </header>
 
   <main class="page-main">
@@ -42,16 +48,14 @@
     <h1 class="visually-hidden">Фотографии и видеоролики о городке Седона, штат Аризона</h1>
 
     <div class="intro">
-      <div class="intro__wrapper">
-        <div class="intro__logo">
-          <div class="page-logo">
-            <img src="img/page-logotype-main.svg" alt="Welcome to Sedona">
-          </div>
+      <div class="intro__logo">
+        <div class="page-logo">
+          <img src="img/page-logotype-main.svg" alt="Welcome to Sedona">
         </div>
-        <div class="intro__lead intro__lead--catalog lead">
-          <b class="lead__slogan">Фото и видео</b>
-          <p class="lead__text">Не можете решиться на путешествие из-за курса? Фотографии помогут вам забыть о политике и экономике.</p>
-        </div>
+      </div>
+      <div class="intro__lead lead-catalog">
+        <b class="lead-catalog__slogan">Фото и видео</b>
+        <p class="lead-catalog__text">Не можете решиться на путешествие из-за курса? <br class="break-non-mobile">Фотографии помогут вам забыть о политике и экономике.</p>
       </div>
     </div>
 
@@ -61,14 +65,25 @@
         <ul class="gallery__list">
           <li class="gallery__item">
             <figure class="photo photo--wide">
-              <div class="photo__image photo__image--wide">
-                <img src="img/photo-1-mobile.jpg" width="280" height="280" alt="Неродные просторы">
-              </div>
+              <a class="photo__image photo__image--wide" href="#">
+                <picture>
+                  <source type="image/webp" media="(min-width: 1200px)" srcset="img/photo-1-desktop.webp 1x, img/photo-1-desktop@2x.webp 2x">
+                  <source type="image/webp" media="(min-width: 768px)" srcset="img/photo-1-tablet.webp 1x, img/photo-1-tablet@2x.webp 2x">
+                  <source type="image/webp" srcset="img/photo-1-mobile.webp 1x, img/photo-1-mobile@2x.webp 2x">
+
+                  <source media="(min-width: 1200px)" srcset="img/photo-1-desktop.jpg 1x, img/photo-1-desktop@2x.jpg 2x">
+                  <source media="(min-width: 768px)" srcset="img/photo-1-tablet.jpg 1x, img/photo-1-tablet@2x.jpg 2x">
+                  <img src="img/photo-1-mobile.jpg" srcset="img/photo-1-mobile@2x.jpg 2x" height="280" alt="Неродные просторы">
+                </picture>
+              </a>
               <figcaption class="photo__caption">
                 <h3 class="photo__title">Неродные просторы</h3>
                 <p class="photo__author">Автор фото: Борис</p>
                 <div class="photo__likes">
-                  <img class="photo__likes-icon" src="img/icon-like.svg" alt="Иконка Like!">
+                  <picture>
+                    <source media="(min-width: 1200px)" srcset="img/icon-like-white.svg">
+                    <img class="photo__likes-icon" src="img/icon-like.svg" alt="Иконка Like!">
+                  </picture>
                   <b class="photo__likes-count">1350</b>
                 </div>
               </figcaption>
@@ -76,14 +91,20 @@
           </li>
           <li class="gallery__item">
             <figure class="photo">
-              <div class="photo__image">
-                <img src="img/photo-2-mobile.jpg" width="280" height="280" alt="Местная растительность">
-              </div>
+              <a class="photo__image" href="#">
+                <picture>
+                  <source type="image/webp" srcset="img/photo-2.webp 1x, img/photo-2@2x.webp 2x">
+                  <img src="img/photo-2.jpg" srcset="img/photo-2@2x.jpg 2x" height="280" alt="Местная растительность">
+                </picture>
+              </a>
               <figcaption class="photo__caption">
                 <h3 class="photo__title">Местная растительность</h3>
                 <p class="photo__author">Автор фото: Сергей</p>
                 <div class="photo__likes">
-                  <img class="photo__likes-icon" src="img/icon-like.svg" alt="Иконка Like!">
+                  <picture>
+                    <source media="(min-width: 1200px)" srcset="img/icon-like-white.svg">
+                    <img class="photo__likes-icon" src="img/icon-like.svg" alt="Иконка Like!">
+                  </picture>
                   <b class="photo__likes-count">143</b>
                 </div>
               </figcaption>
@@ -91,14 +112,20 @@
           </li>
           <li class="gallery__item">
             <figure class="photo">
-              <div class="photo__image">
-                <img src="img/photo-3-mobile.jpg" width="280" height="280" alt="Дорога на север">
-              </div>
+              <a class="photo__image" href="#">
+                <picture>
+                  <source type="image/webp" srcset="img/photo-3.webp 1x, img/photo-3@2x.webp 2x">
+                  <img src="img/photo-3.jpg" srcset="img/photo-3@2x.jpg 2x" height="280" alt="Дорога на север">
+                </picture>
+              </a>
               <figcaption class="photo__caption">
                 <h3 class="photo__title">Дорога на север</h3>
                 <p class="photo__author">Автор фото: Петр</p>
                 <div class="photo__likes">
-                  <img class="photo__likes-icon" src="img/icon-like.svg" alt="Иконка Like!">
+                  <picture>
+                    <source media="(min-width: 1200px)" srcset="img/icon-like-white.svg">
+                    <img class="photo__likes-icon" src="img/icon-like.svg" alt="Иконка Like!">
+                  </picture>
                   <b class="photo__likes-count">96</b>
                 </div>
               </figcaption>
@@ -106,14 +133,20 @@
           </li>
           <li class="gallery__item">
             <figure class="photo">
-              <div class="photo__image">
-                <img src="img/photo-4-mobile.jpg" width="280" height="280" alt="Мост Дьявола">
-              </div>
+              <a class="photo__image" href="#">
+                <picture>
+                  <source type="image/webp" srcset="img/photo-4.webp 1x, img/photo-4@2x.webp 2x">
+                  <img src="img/photo-4.jpg" srcset="img/photo-4@2x.jpg 2x" height="280" alt="Мост Дьявола">
+                </picture>
+              </a>
               <figcaption class="photo__caption">
                 <h3 class="photo__title">Мост Дьявола</h3>
                 <p class="photo__author">Автор фото: Антон</p>
                 <div class="photo__likes">
-                  <img class="photo__likes-icon" src="img/icon-like.svg" alt="Иконка Like!">
+                  <picture>
+                    <source media="(min-width: 1200px)" srcset="img/icon-like-white.svg">
+                    <img class="photo__likes-icon" src="img/icon-like.svg" alt="Иконка Like!">
+                  </picture>
                   <b class="photo__likes-count">254</b>
                 </div>
               </figcaption>
@@ -123,17 +156,28 @@
       </div>
     </section>
 
-    <section class="gallery-video">
-      <div class="gallery-video__wrapper">
-        <h2 class="visually-hidden">Галерея видео</h2>
-        <div class="lead">
-          <b class="lead__slogan">Все еще сомневаетесь?</b>
-          <p class="lead__text">Смотрите видеопрезентацию и скорее за билетами, пока они не подорожали в очередной раз!</p>
+    <section class="video">
+      <h2 class="visually-hidden">Галерея видео</h2>
+      <div class="video__lead">
+        <b class="video__slogan">Все еще сомневаетесь?</b>
+        <p class="video__text">Смотрите видеопрезентацию и скорее за билетами, пока они не подорожали в очередной раз!</p>
+      </div>
+      <div class="video__item clip">
+        <video class="clip__video"></video>
+        <div class="clip__video-preview">
+          <picture>
+            <source media="(min-width: 1200px)" srcset="img/video-desktop.jpg 1x, img/video-desktop@2x.jpg 2x">
+            <source media="(min-width: 768px)" srcset="img/video-tablet.jpg 1x, img/video-tablet@2x.jpg 2x">
+            <img src="img/video-mobile.jpg" srcset="img/video-mobile@2x.jpg 2x" alt="the development process">
+          </picture>
         </div>
-        <div class="gallery-video__item">
-          <video src="videofile.ogg" autoplay poster="posterimage.jpg" controls>
-
-          </video>
+        <div class="clip__controls">
+          <input class="clip__progress-bar" type="range" min="0" max="100" value="20">
+          <div class="clip__buttons">
+            <button class="clip__button clip__button--replay" type"button">Replay</button>
+            <button class="clip__button clip__button--subtitle" type"button">Subtitle on/off</button>
+            <button class="clip__button clip__button--fullscreen" type"button">Full-screen</button>
+          </div>
         </div>
       </div>
     </section>
@@ -160,6 +204,23 @@
       <a class="copyright__link" href="https://htmlacademy.ru/intensive/adaptive" aria-label="HTML Academy"></a>
     </div>
   </footer>
+
+  <script>
+    let navMain = document.querySelector('.main-nav');
+    let navToggle = document.querySelector('.main-nav__toggle');
+
+    navMain.classList.remove('main-nav--nojs');
+
+    navToggle.addEventListener('click', function() {
+      if (navMain.classList.contains('main-nav--closed')) {
+        navMain.classList.remove('main-nav--closed');
+        navMain.classList.add('main-nav--opened');
+      } else {
+        navMain.classList.add('main-nav--closed');
+        navMain.classList.remove('main-nav--opened');
+      }
+    });
+  </script>
 
 </body>
 
