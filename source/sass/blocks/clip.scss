@@ -1,5 +1,5 @@
 .clip {
-  //
+  // overflow: hidden;
 }
 
 .clip__video {
@@ -27,34 +27,73 @@
 
 .clip__controls {
   position: relative;
-  display: flex;
-  flex-wrap: wrap;
+  display: grid;
+  grid-template-areas:
+    "progress"
+    "controls";
   z-index: 10;
-  height: 111px;
-  margin: -45px 20px 0;
-  outline: 2px solid red;
-  outline-offset: -2px;
+  width: 87.5%;
+  height: 112px;
+  margin: -45px auto 0;
+  background-color: rgba(0, 0, 0, 0.6);
 
   @media (min-width: $width-tablet) {
-    justify-content: space-between;
+    grid-template-areas: "replay progress subtitle fullscreen";
+    grid-template-columns: 36px 1fr 52px 58px;
+    grid-template-rows: 93px;
+    justify-items: end;
+    align-items: center;
+    width: 100%;
     height: 93px;
     margin: -93px 0 0;
-    background-color: rgba(0, 0, 0, 0.6);
+    padding-left: 35px;
+    padding-right: 35px;
   }
 }
 
 .clip__progress-bar {
-  width: 100%;
-  border: 0;
+  grid-area: progress;
+  appearance: none;
+  height: 3px;
+  margin: 22px;
+  background-color: rgba(255, 255, 255, 0.2);
+
+  &::-webkit-slider-thumb {
+    appearance: none;
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    border: none;
+    background: #ffffff;
+    cursor: pointer;
+  }
+
+  &::-moz-range-thumb {
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    border: none;
+    background: #ffffff;
+    cursor: pointer;
+  }
+
+  &:focus {
+    outline: none;
+  }
 
   @media (min-width: $width-tablet) {
-    width: auto;
+    justify-self: stretch;
   }
 }
 
 .clip__buttons {
+  grid-area: controls;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
   width: 100%;
-  height: 66px;
+  height: 65px;
+  padding: 0 22px;
   background-color: #f2f2f2;
 
   @media (min-width: $width-tablet) {
@@ -66,18 +105,38 @@
   background-color: transparent;
   outline: 0;
   border: 0;
+  font-size: 0;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 
 .clip__button--replay {
+  grid-area: replay;
+  width: 16px;
+  height: 20px;
+  background-image: url("../img/icon-replay.svg");
+
   @media (min-width: $width-tablet) {
-    order: -1;
+    justify-self: start;
   }
 }
 
 .clip__button--subtitle {
-  // grid-area: subtitle;
+  grid-area: subtitle;
+  width: 32px;
+  height: 20px;
+  margin: 0 31px 0 auto;
+  background-image: url("../img/icon-subtitles.svg");
+
+  @media (min-width: $width-tablet) {
+    margin: 0;
+  }
 }
 
 .clip__button--fullscreen {
-  // grid-area: fullscreen;
+  grid-area: fullscreen;
+  width: 20px;
+  height: 20px;
+  background-image: url("../img/icon-fullscreen.svg");
 }
