@@ -1,5 +1,5 @@
 .break-non-mobile {
-  @media (max-width: 767px) {
+  @media (max-width: $width-mobile-only) {
     display: none;
   }
 }
