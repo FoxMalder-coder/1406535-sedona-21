@@ -40,17 +40,31 @@
   min-height: 165px;
   margin-top: -10px;
   background-color: #af9499;
-  background-image: url("../img/background-intro.jpg");
+  background-image: url("../img/background-mobile.jpg");
   background-repeat: no-repeat;
   background-position: top center;
   background-size: cover;
 
+  @media (min-resolution: 2dppx) {
+    background-image: url("../img/background-mobile@2x.jpg");
+  }
+
   @media (min-width: $width-tablet) {
     min-height: 297px;
+    background-image: url("../img/background-tablet.jpg");
+
+    @media (min-resolution: 2dppx) {
+      background-image: url("../img/background-tablet@2x.jpg");
+    }
   }
 
   @media (min-width: $width-desktop) {
     min-height: 310px;
+    background-image: url("../img/background-desktop.jpg");
+
+    @media (min-resolution: 2dppx) {
+      background-image: url("../img/background-desktop@2x.jpg");
+    }
   }
 }
 
