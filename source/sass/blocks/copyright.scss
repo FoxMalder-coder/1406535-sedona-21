@@ -1,5 +1,4 @@
 .copyright {
-  color: red;
   height: 34px;
   display: grid;
   grid-template-columns: min-content 27px;
@@ -14,7 +13,7 @@
 }
 
 .copyright__link {
-  width: 27px;
+  width: 28px;
   height: 35px;
   background-color: $black;
   mask-image: url("../img/logotype-htmlacademy.svg");

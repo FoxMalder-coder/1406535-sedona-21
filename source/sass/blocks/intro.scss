@@ -40,21 +40,24 @@
     background-image: url("../img/background-mobile@2x.jpg");
   }
 
-  @media (min-width: $width-mobile-only) {
+  @media (min-width: $width-mobile-only) and (max-width: $width-tablet) {
+    min-height: 297px;
+    background-image: url("../img/background-tablet.jpg");
     background-size: cover;
+
+    @media (min-resolution: 2dppx) {
+      background-image: url("../img/background-tablet@2x.jpg");
+    }
   }
 
-  @media (min-width: $width-tablet) {
-    min-height: 297px;
+  @media (min-width: 769px) {
+    min-height: 310px;
     background-image: url("../img/background-desktop.jpg");
+    background-size: cover;
 
     @media (min-resolution: 2dppx) {
       background-image: url("../img/background-desktop@2x.jpg");
     }
-  }
-
-  @media (min-width: $width-desktop) {
-    min-height: 310px;
   }
 }
 
