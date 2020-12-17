@@ -8,10 +8,10 @@
 
   font-family: "PT Sans", "Tahoma", sans-serif;
 
-  @include text(14px, 21px, 400, $text-additional);
+  @include text(14px, 21px, 400, $gray-51);
 
   @media (min-width: $width-desktop) {
-    background-color: #ffffff;
-    box-shadow: 0 5px 15px rgba(1, 1, 1, 0.2);
+    background-color: $white;
+    box-shadow: 0 5px 15px rgba($black, 0.2);
   }
 }

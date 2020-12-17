@@ -3,8 +3,10 @@
 
 // общие стили
 @import "variables.scss";
+@import "mixin.scss";
 @import "fonts.scss";
 @import "global.scss";
+@import "blocks/visually-hidden";
 @import "blocks/button.scss";
 @import "blocks/break.scss";
 

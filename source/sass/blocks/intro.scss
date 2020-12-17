@@ -6,29 +6,20 @@
   position: relative;
   z-index: 1;
 
-  &::after,
-  &::before {
+  &::after {
     position: absolute;
     bottom: -37px;
-    display: block;
-    content: "";
-    width: 384px;
+    left: 50%;
+    transform: translateX(calc(-768px / 2));
+    width: 768px;
     height: 38px;
-    background-image: url("../img/intro-triangle-bottom.svg");
-    background-repeat: no-repeat;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 2 1' preserveAspectRatio='none'%3E%3Cpolygon points='0,0 2,0 1,1' fill='white'/%3E%3C/svg%3E");
+    background-size: 100% 100%;
+    content: "";
 
     @media (min-width: $width-mobile-only) {
       display: none;
     }
-  }
-
-  &::after {
-    left: 50%;
-  }
-
-  &::before {
-    right: 50%;
-    transform: scale(-1, 1);
   }
 }
 
@@ -78,26 +69,17 @@
 
 .intro__lead {
   position: relative;
-  background-color: #ffffff;
-
-  &::before,
-  &::after {
-    position: absolute;
-    top: -56px;
-    display: block;
-    content: "";
-    width: 600px;
-    height: 57px;
-    background-image: url("../img/intro-triangle-top.svg");
-    background-repeat: no-repeat;
-  }
+  background-color: $white;
 
   &::before {
+    position: absolute;
+    top: -56px;
     left: 50%;
-  }
-
-  &::after {
-    right: 50%;
-    transform: scale(-1, 1);
+    transform: translateX(calc(-1205px / 2));
+    width: 1205px;
+    height: 57px;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 20 5' preserveAspectRatio='none'%3E%3Cpolygon points='0,0 4,2 4,0 10,5 16,0 16,2 20,0 20,5 0,5 0,0' fill='white'/%3E%3C/svg%3E");
+    background-size: 100% 100%;
+    content: "";
   }
 }

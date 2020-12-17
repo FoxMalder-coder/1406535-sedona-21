@@ -1,12 +1,3 @@
-$bg-normal: #81b3d2;
-$bg-hover: #669ec0;
-$bg-active: #5496bd;
-$bg-disabled: #e5e5e5;
-$text-normal: #ffffff;
-$text-hover: #ffffff;
-$text-active: rgba(255, 255, 255, 0.3);
-$text-disabled: #ffffff;
-
 .button {
   display: block;
   width: 100%;
@@ -15,28 +6,26 @@ $text-disabled: #ffffff;
 
   font-family: inherit;
 
-  @include text(21px, 26px, 700, $text-normal);
+  @include text(21px, 26px, 700, $white);
   text-align: center;
   text-decoration: none;
   text-transform: uppercase;
-
-  // color: ;
-  background-color: $bg-normal;
+  background-color: $light-blue;
   border: 0;
 
   &:focus,
   &:hover {
-    color: $text-hover;
-    background-color: $bg-hover;
+    color: $white;
+    background-color: $blue;
   }
 
   &:active {
-    color: $text-active;
-    background-color: $bg-active;
+    color: rgba($white, 0.3);
+    background-color: $dark-blue;
   }
 
   &:disabled {
-    color: $text-disabled;
-    background-color: $bg-disabled;
+    color: $white;
+    background-color: $gray-229;
   }
 }

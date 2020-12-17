@@ -4,7 +4,7 @@
 // Модальное окно
 .modal {
   opacity: 0; // Прячем
-  // background-color: rgba(0, 0, 0, 0.7); // Затемняет всё вокруг
+  // background-color: rgba($black, 0.7); // Затемняет всё вокруг
   pointer-events: none;
   position: fixed; //
   top: 0; //
@@ -39,8 +39,8 @@
     "button";
   align-items: center;
   width: 100%;
-  background-color: #ffffff;
-  box-shadow: 0 7px 15px rgba(0, 1, 1, 0.15);
+  background-color: $white;
+  box-shadow: 0 7px 15px rgba($black, 0.15);
 }
 
 .modal__button {
@@ -56,7 +56,7 @@
 }
 
 .modal__slogan {
-  @include text(18px, 26px, 700, $text-main);
+  @include text(18px, 26px, 700, $black);
 
   @media (min-width: $width-tablet) {
     font-size: 30px;
@@ -65,7 +65,7 @@
 }
 
 .modal__text {
-  @include text(14px, 24px, 400, $text-additional);
+  @include text(14px, 24px, 400, $gray-51);
   margin: 25px 0 0;
 }
 
@@ -133,7 +133,7 @@
 
 .modal__inner--success .modal__button {
   padding: 20px;
-  background-color: #f2f2f2;
+  background-color: $gray-242;
 
   @media (min-width: $width-tablet) {
     padding: 44px;

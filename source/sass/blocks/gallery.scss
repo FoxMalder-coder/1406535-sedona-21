@@ -3,7 +3,7 @@
 // .gallery__wrapper {}
 
 .gallery__list {
-  @include fix-list;
+  @include list-reset;
   width: 100%;
 
   @media (min-width: $width-mobile-only) {
@@ -25,7 +25,7 @@
 .gallery__item {
   width: 100%;
   padding: 22px 20px 0;
-  border-top: 1px solid #e5e5e5;
+  border-top: 1px solid $gray-229;
 
   @media (min-width: $width-mobile-only) {
     max-width: $width-mobile-only;
@@ -40,7 +40,7 @@
 }
 
 .gallery__item:last-child {
-  border-bottom: 1px solid #e5e5e5;
+  border-bottom: 1px solid $gray-229;
 
   @media (min-width: $width-mobile-only) {
     border: 0;

@@ -6,7 +6,7 @@
 .lead__slogan {
   margin-bottom: 35px;
 
-  @include text(18px, 26px, 700, $text-main);
+  @include text(18px, 26px, 700, $black);
 
   &--larger {
     font-size: 21px;
