@@ -13,7 +13,7 @@
 }
 
 .lead-form__slogan {
-  @include text(18px, 26px, 700, $text-main);
+  @include text(18px, 26px, 700, $black);
 
   @media (min-width: $width-tablet) {
     font-size: 30px;
@@ -21,6 +21,6 @@
 }
 
 .lead-form__text {
-  @include text(14px, 24px, 400, $text-additional);
+  @include text(14px, 24px, 400, $gray-51);
   margin: 30px 0 0;
 }

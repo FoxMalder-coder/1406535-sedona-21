@@ -30,7 +30,7 @@
 }
 
 .video__slogan {
-  @include text(18px, 26px, 700, $text-main);
+  @include text(18px, 26px, 700, $black);
 
   @media (min-width: $width-tablet) {
     font-size: 30px;
@@ -38,7 +38,7 @@
 }
 
 .video__text {
-  @include text(14px, 24px, 400, $text-additional);
+  @include text(14px, 24px, 400, $gray-51);
   margin: 28px 0 0;
 
   @media (min-width: $width-tablet) {

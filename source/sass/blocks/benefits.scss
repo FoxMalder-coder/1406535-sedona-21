@@ -1,5 +1,5 @@
 .benefits {
-  @include fix-list;
+  @include list-reset;
   display: flex;
   flex-direction: column;
   text-transform: uppercase;
@@ -79,20 +79,20 @@
 
 .benefits__title {
   margin: 0;
-  padding: 0 0 15px;
+  padding: 0;
 
-  @include text(18px, 26px, 700, $text-main);
+  @include text(18px, 26px, 700, $black);
 
   @media (min-width: $width-tablet) {
-    padding-bottom: 22px;
     font-size: 21px;
   }
 }
 
 .benefits__text {
-  margin: 0;
+  margin: 15px 0 0;
 
   @media (min-width: $width-tablet) {
+    margin-top: 22px;
     line-height: 22px;
   }
 }

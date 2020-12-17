@@ -35,7 +35,7 @@
   width: 87.5%;
   height: 112px;
   margin: -45px auto 0;
-  background-color: rgba(0, 0, 0, 0.6);
+  background-color: rgba($black, 0.6);
 
   @media (min-width: $width-tablet) {
     grid-template-areas: "replay progress subtitle fullscreen";
@@ -56,7 +56,7 @@
   appearance: none;
   height: 3px;
   margin: 22px;
-  background-color: rgba(255, 255, 255, 0.2);
+  background-color: rgba($white, 0.2);
 
   &::-webkit-slider-thumb {
     appearance: none;
@@ -64,7 +64,7 @@
     height: 10px;
     border-radius: 50%;
     border: none;
-    background: #ffffff;
+    background-color: $white;
     cursor: pointer;
   }
 
@@ -73,7 +73,7 @@
     height: 10px;
     border-radius: 50%;
     border: none;
-    background: #ffffff;
+    background-color: $white;
     cursor: pointer;
   }
 
@@ -94,7 +94,7 @@
   width: 100%;
   height: 65px;
   padding: 0 22px;
-  background-color: #f2f2f2;
+  background-color: $gray-242;
 
   @media (min-width: $width-tablet) {
     display: contents;
@@ -119,6 +119,7 @@
 
   @media (min-width: $width-tablet) {
     justify-self: start;
+    background-image: url("../img/icon-replay-white.svg");
   }
 }
 
@@ -131,6 +132,7 @@
 
   @media (min-width: $width-tablet) {
     margin: 0;
+    background-image: url("../img/icon-subtitles-white.svg");
   }
 }
 
@@ -139,4 +141,8 @@
   width: 20px;
   height: 20px;
   background-image: url("../img/icon-fullscreen.svg");
+
+  @media (min-width: $width-tablet) {
+    background-image: url("../img/icon-fullscreen-white.svg");
+  }
 }

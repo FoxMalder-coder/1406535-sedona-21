@@ -1,11 +1,7 @@
-$bg-normal: #81b3d2;
-$bg-hover: #669ec0;
-$bg-active: #5496bd;
-
 // .social {}
 
 .social__list {
-  @include fix-list;
+  @include list-reset;
   display: flex;
   margin: -3px;
 }
@@ -21,18 +17,18 @@ $bg-active: #5496bd;
   width: 46px;
   height: 48px;
 
-  background-color: $bg-normal;
+  background-color: $light-blue;
   background-repeat: no-repeat;
   background-size: auto;
   background-position: 50% 50%;
 
   &:hover,
   &:focus {
-    background-color: $bg-hover;
+    background-color: $blue;
   }
 
   &:active {
-    background-color: $bg-active;
+    background-color: $dark-blue;
   }
 
   &--twitter {

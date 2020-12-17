@@ -10,14 +10,12 @@
     @media (min-width: $width-desktop) {
       position: absolute;
       top: 0;
-      margin-left: -42.5px;
+      left: 50%;
+      transform: translateX(calc(-187px / 2));
       z-index: -1;
       width: 187px;
-      height: 96.5px;
-      background-image: url("../img/header-logotype-desktop-background.svg");
-      background-size: 187px 96.5px;
-      background-repeat: no-repeat;
-      background-position: top center;
+      height: 97px;
+      background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 187 97' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M187 0H0l81 91c7 7 18 7 25 0l81-91z' fill='%2381B3D3'/%3E%3C/svg%3E");
     }
   }
 }

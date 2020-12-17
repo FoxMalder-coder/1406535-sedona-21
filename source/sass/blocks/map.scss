@@ -1,7 +1,47 @@
 .map {
+  position: relative;
   width: 100%;
+  height: 350px;
+  background-image: url("../img/map-mobile.jpg");
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
+
+  &::before {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 27px;
+    height: 27px;
+    background-color: $light-blue;
+    border-radius: 50%;
+    border: 5px solid $white;
+    content: "";
+  }
+
+  @media (min-resolution: 2dppx) {
+    background-image: url("../img/map-mobile@2x.jpg");
+  }
+
+  @media (min-width: $width-mobile-only) and (max-width: $width-tablet) {
+    background-image: url("../img/map-tablet.jpg");
+
+    @media (min-resolution: 2dppx) {
+      background-image: url("../img/map-tablet@2x.jpg");
+    }
+  }
+
+  @media (min-width: 769px) {
+    background-image: url("../img/map-desktop.jpg");
+
+    @media (min-resolution: 2dppx) {
+      background-image: url("../img/map-desktop@2x.jpg");
+    }
+  }
 
   iframe {
+    width: 100%;
+    height: 100%;
     border: 0;
   }
 }

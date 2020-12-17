@@ -1,5 +1,5 @@
 .features {
-  @include fix-list;
+  @include list-reset;
 
   text-align: center;
   text-transform: uppercase;
@@ -56,7 +56,7 @@
 .features__intro {
   position: relative;
   padding: 26px 35px;
-  background-color: $additional-color;
+  background-color: $gray-238;
 
   &::after {
     position: absolute;
@@ -66,7 +66,7 @@
     display: block;
     width: 87.5%;
     height: 1px;
-    background-color: #d6d6d6;
+    background-color: $gray-214;
 
     // Убираем линеечки при перестроении
     @media (min-width: $width-tablet) {
@@ -98,7 +98,7 @@
 .features__intro--accent {
   padding-left: 13px;
   padding-right: 13px;
-  background-color: $main-color;
+  background-color: $light-blue;
 
 
   @media (min-width: $width-tablet) {
@@ -146,7 +146,7 @@
 .features__title {
   margin: 0;
 
-  @include text(18px, 26px, 700, $text-main);
+  @include text(18px, 26px, 700, $black);
 
   @media (min-width: $width-tablet) {
     font-size: 21px;
@@ -178,7 +178,7 @@
 .features__title--accent,
 .features__number--accent,
 .features__text--accent {
-  color: #ffffff;
+  color: $white;
 }
 
 .features__description {

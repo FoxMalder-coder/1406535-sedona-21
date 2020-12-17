@@ -19,7 +19,7 @@
 
 // .search__lead {}
 .search__slogan {
-  @include text(21px, 26px, 700, $text-main);
+  @include text(21px, 26px, 700, $black);
 
   @media (min-width: $width-tablet) {
     font-size: 30px;
@@ -27,7 +27,7 @@
 }
 
 .search__text {
-  @include text(14px, 24px, 400, $text-additional);
+  @include text(14px, 24px, 400, $gray-51);
   margin: 21px 0 0;
 
   @media (min-width: $width-tablet) {
