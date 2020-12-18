@@ -65,15 +65,15 @@
         <div class="form__group-title">Представьтесь:</div>
         <div class="form__row">
           <label class="form__label" for="first-name">Имя*:</label>
-          <input id="first-name" type="text" name="first-name" required>
+          <input id="first-name" type="text" name="first-name" placeholder="Петр" required>
         </div>
         <div class="form__row">
           <label class="form__label" for="surname">Фамилия*:</label>
-          <input id="surname" type="text" name="surname" required>
+          <input id="surname" type="text" name="surname" placeholder="Иванов" required>
         </div>
         <div class="form__row">
           <label class="form__label" for="second-name">Отчество:</label>
-          <input id="second-name" type="text" name="second-name">
+          <input id="second-name" type="text" name="second-name" placeholder="Александрович">
         </div>
       </fieldset>
       <fieldset class="form__group form__group--contacts">
@@ -128,7 +128,7 @@
       <fieldset class="form__group form__group--comment">
         <legend class="visually-hidden">Отзыв</legend>
         <div class="form__group-title">Опишите свои эмоции:</div>
-        <textarea name="comment">Опишите подробно все свои восторги</textarea>
+        <textarea name="comment" placeholder="Опишите подробно все свои восторги"></textarea>
       </fieldset>
       <small class="form__legend">* — Обязательные поля</small>
       <button class="form__button button" formaction="#modal-success" type="submit">Отправить отзыв</button>
