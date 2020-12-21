@@ -4,14 +4,19 @@
   min-height: 26px;
   padding: 16px 15px;
 
-  font-family: inherit;
+  font-size: 21px;
+  line-height: 26px;
+  font-weight: 700;
 
-  @include text(21px, 26px, 700, $white);
   text-align: center;
   text-decoration: none;
   text-transform: uppercase;
-  background-color: $light-blue;
   border: 0;
+}
+
+.button--ordinary {
+  color: $white;
+  background-color: $light-blue;
 
   &:focus,
   &:hover {

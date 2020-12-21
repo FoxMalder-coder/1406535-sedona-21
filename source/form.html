@@ -65,15 +65,15 @@
         <div class="form__group-title">Представьтесь:</div>
         <div class="form__row">
           <label class="form__label" for="first-name">Имя*:</label>
-          <input id="first-name" type="text" name="first-name" placeholder="Петр" required>
+          <input id="first-name" type="text" name="first-name" required>
         </div>
         <div class="form__row">
           <label class="form__label" for="surname">Фамилия*:</label>
-          <input id="surname" type="text" name="surname" placeholder="Иванов" required>
+          <input id="surname" type="text" name="surname" required>
         </div>
         <div class="form__row">
           <label class="form__label" for="second-name">Отчество:</label>
-          <input id="second-name" type="text" name="second-name" placeholder="Александрович">
+          <input id="second-name" type="text" name="second-name">
         </div>
       </fieldset>
       <fieldset class="form__group form__group--contacts">
@@ -131,7 +131,7 @@
         <textarea name="comment" placeholder="Опишите подробно все свои восторги"></textarea>
       </fieldset>
       <small class="form__legend">* — Обязательные поля</small>
-      <button class="form__button button" formaction="#modal-success" type="submit">Отправить отзыв</button>
+      <button class="form__button button button--ordinary" formaction="#modal-success" type="submit">Отправить отзыв</button>
     </form>
 
     <div id="modal-error" class="modal">
@@ -141,7 +141,7 @@
             <b class="modal__slogan">Что-то пошло <br class="break-non-mobile">не так!</b>
             <p class="modal__text">Проверьте поля, выделенные красным, скорее всего вы забыли их заполнить</p>
           </div>
-          <a class="button modal__button" href="#close">OK</a>
+          <a class="modal__button button button--ordinary" href="#close">OK</a>
         </div>
       </div>
     </div>
@@ -154,7 +154,7 @@
             <p class="modal__text">Спасибо за&nbsp;ваше участие, ваш отзыв уже поступил к&nbsp;нам. <br class="break-non-mobile">В&nbsp;ближайшее время мы опубликуем его на&nbsp;сайте.</p>
           </div>
           <div class="modal__button">
-            <a class="button" href="#close">Закрыть окно</a>
+            <a class="button button--ordinary" href="#close">Закрыть окно</a>
           </div>
         </div>
       </div>
@@ -183,22 +183,7 @@
     </div>
   </footer>
 
-  <script>
-    let navMain = document.querySelector('.main-nav');
-    let navToggle = document.querySelector('.main-nav__toggle');
-
-    navMain.classList.remove('main-nav--nojs');
-
-    navToggle.addEventListener('click', function() {
-      if (navMain.classList.contains('main-nav--closed')) {
-        navMain.classList.remove('main-nav--closed');
-        navMain.classList.add('main-nav--opened');
-      } else {
-        navMain.classList.add('main-nav--closed');
-        navMain.classList.remove('main-nav--opened');
-      }
-    });
-  </script>
+  <script src="js/script.js"></script>
 
 </body>
 

@@ -80,10 +80,9 @@
                 <h3 class="photo__title">Неродные просторы</h3>
                 <p class="photo__author">Автор фото: Борис</p>
                 <div class="photo__likes">
-                  <picture>
-                    <source media="(min-width: 1200px)" srcset="img/icon-like-white.svg">
-                    <img class="photo__likes-icon" src="img/icon-like.svg" alt="Иконка Like!">
-                  </picture>
+                  <svg class="photo__likes-icon" width="23" height="21">
+                    <use xlink:href="img/sprite.svg#like"></use>
+                  </svg>
                   <b class="photo__likes-count">1350</b>
                 </div>
               </figcaption>
@@ -101,10 +100,9 @@
                 <h3 class="photo__title">Местная растительность</h3>
                 <p class="photo__author">Автор фото: Сергей</p>
                 <div class="photo__likes">
-                  <picture>
-                    <source media="(min-width: 1200px)" srcset="img/icon-like-white.svg">
-                    <img class="photo__likes-icon" src="img/icon-like.svg" alt="Иконка Like!">
-                  </picture>
+                  <svg class="photo__likes-icon" width="23" height="21">
+                    <use xlink:href="img/sprite.svg#like"></use>
+                  </svg>
                   <b class="photo__likes-count">143</b>
                 </div>
               </figcaption>
@@ -122,10 +120,9 @@
                 <h3 class="photo__title">Дорога на север</h3>
                 <p class="photo__author">Автор фото: Петр</p>
                 <div class="photo__likes">
-                  <picture>
-                    <source media="(min-width: 1200px)" srcset="img/icon-like-white.svg">
-                    <img class="photo__likes-icon" src="img/icon-like.svg" alt="Иконка Like!">
-                  </picture>
+                  <svg class="photo__likes-icon" width="23" height="21">
+                    <use xlink:href="img/sprite.svg#like"></use>
+                  </svg>
                   <b class="photo__likes-count">96</b>
                 </div>
               </figcaption>
@@ -143,10 +140,9 @@
                 <h3 class="photo__title">Мост Дьявола</h3>
                 <p class="photo__author">Автор фото: Антон</p>
                 <div class="photo__likes">
-                  <picture>
-                    <source media="(min-width: 1200px)" srcset="img/icon-like-white.svg">
-                    <img class="photo__likes-icon" src="img/icon-like.svg" alt="Иконка Like!">
-                  </picture>
+                  <svg class="photo__likes-icon" width="23" height="21">
+                    <use xlink:href="img/sprite.svg#like"></use>
+                  </svg>
                   <b class="photo__likes-count">254</b>
                 </div>
               </figcaption>
@@ -162,21 +158,20 @@
         <b class="video__slogan">Все еще сомневаетесь?</b>
         <p class="video__text">Смотрите видеопрезентацию и скорее за билетами, пока они не подорожали в очередной раз!</p>
       </div>
-      <div class="video__item clip">
-        <video class="clip__video"></video>
-        <div class="clip__video-preview">
+      <div class="video__item">
+        <div class="video__preview">
           <picture>
             <source media="(min-width: 1200px)" srcset="img/video-desktop.jpg 1x, img/video-desktop@2x.jpg 2x">
             <source media="(min-width: 768px)" srcset="img/video-tablet.jpg 1x, img/video-tablet@2x.jpg 2x">
             <img src="img/video-mobile.jpg" srcset="img/video-mobile@2x.jpg 2x" alt="the development process">
           </picture>
         </div>
-        <div class="clip__controls">
-          <input class="clip__progress-bar" type="range" min="0" max="100" value="20">
-          <div class="clip__buttons">
-            <button class="clip__button clip__button--replay" type="button">Replay</button>
-            <button class="clip__button clip__button--subtitle" type="button">Subtitle on/off</button>
-            <button class="clip__button clip__button--fullscreen" type="button">Full-screen</button>
+        <div class="video__controls">
+          <input class="video__progress-bar" type="range" min="0" max="100" value="20">
+          <div class="video__buttons">
+            <button class="video__button video__button--replay" type="button">Replay</button>
+            <button class="video__button video__button--subtitle" type="button">Subtitle on/off</button>
+            <button class="video__button video__button--fullscreen" type="button">Full-screen</button>
           </div>
         </div>
       </div>
@@ -205,22 +200,7 @@
     </div>
   </footer>
 
-  <script>
-    let navMain = document.querySelector('.main-nav');
-    let navToggle = document.querySelector('.main-nav__toggle');
-
-    navMain.classList.remove('main-nav--nojs');
-
-    navToggle.addEventListener('click', function() {
-      if (navMain.classList.contains('main-nav--closed')) {
-        navMain.classList.remove('main-nav--closed');
-        navMain.classList.add('main-nav--opened');
-      } else {
-        navMain.classList.add('main-nav--closed');
-        navMain.classList.remove('main-nav--opened');
-      }
-    });
-  </script>
+  <script src="js/script.js"></script>
 
 </body>
 
