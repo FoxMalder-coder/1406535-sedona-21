@@ -94,7 +94,8 @@
 
 .photo__likes {
   display: flex;
-  align-items: center;
+  align-items: baseline;
+  align-self: center;
   margin-top: 11.5px;
 
   @media (min-width: $width-mobile-only) {
@@ -105,10 +106,18 @@
 }
 
 .photo__likes-icon {
-  margin-right: 14px;
+  margin-right: 15px;
+  color: rgba($black, 0.3);
 
-  @media (min-width: $width-tablet) {
+  @media (min-width: $width-mobile-only) {
     margin-right: 9px;
   }
+
+  @media (min-width: $width-desktop) {
+    color: $white;
+  }
 }
-// .photo__likes-count {}
+
+.photo__likes-count {
+  font-weight: 700;
+}

@@ -56,7 +56,7 @@
 .features__intro {
   position: relative;
   padding: 26px 35px;
-  background-color: $gray-238;
+  background-color: $gray-242;
 
   &::after {
     position: absolute;
@@ -66,7 +66,7 @@
     display: block;
     width: 87.5%;
     height: 1px;
-    background-color: $gray-214;
+    background-color: $gray-213;
 
     // Убираем линеечки при перестроении
     @media (min-width: $width-tablet) {
