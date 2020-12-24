@@ -4,11 +4,13 @@
   padding: 33px 25px 13px;
 
   @media (min-width: $width-mobile-only) {
-    padding: 43.5px 7.8125% 54px;
+    padding-top: 44px;
+    padding-bottom: 54px;
   }
 
   @media (min-width: $width-desktop) {
-    padding: 55px 10% 42px;
+    padding-top: 55px;
+    padding-bottom: 42px;
   }
 }
 

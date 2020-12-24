@@ -1,6 +1,12 @@
-// .gallery {}
+.gallery__wrapper {
+  @media (min-width: $width-tablet) {
+    padding: 0 60px;
+  }
 
-// .gallery__wrapper {}
+  @media (min-width: $width-desktop) {
+    padding: 0;
+  }
+}
 
 .gallery__list {
   @include list-reset;
@@ -13,12 +19,10 @@
 
   @media (min-width: $width-tablet) {
     grid-template-columns: repeat(2, 1fr);
-    padding: 0 7.8125%;
   }
 
   @media (min-width: $width-desktop) {
     grid-template-columns: repeat(3, 1fr);
-    padding: 0;
   }
 }
 

@@ -3,11 +3,13 @@
 
 <head>
   <meta charset="utf-8">
-  <title>HTML Academy: Седона</title>
   <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="keywords" content="горы, туризм, отдых, Аризона">
+  <meta name="description" content="Седона - небольшой туристический городок в Аризоне, США">
+  <title>HTML Academy: Седона - форма</title>
   <link rel="preload" href="fonts/ptsans.woff2" as="font" type="font/woff2" crossorigin="anonymous">
   <link rel="preload" href="fonts/ptsansbold.woff2" as="font" type="font/woff2" crossorigin="anonymous">
-  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/style.min.css">
 </head>
 
 <body class="page-body">
@@ -48,12 +50,12 @@
     <h1 class="visually-hidden">Страница формы отзыва</h1>
 
     <div class="intro">
-      <div class="intro__logo">
-        <div class="page-logo">
-          <img src="img/page-logotype-main.svg" alt="Welcome to Sedona">
+      <div class="intro__logo intro__logo--not-main">
+        <div class="page-logo page-logo--not-main">
+          <img src="img/page-logotype.svg" alt="Welcome to Sedona" width="282" height="214">
         </div>
       </div>
-      <div class="intro__lead lead-form">
+      <div class="intro__lead lead-form wrapper">
         <b class="lead-form__slogan">Оставьте свой отзыв</b>
         <p class="lead-form__text">Помогите нашим отелям стать лучше! Оставьте отзыв о них, <br class="break-non-mobile">а&nbsp;также о посещенных вами достопримечательностях</p>
       </div>
@@ -94,7 +96,7 @@
         <div class="form__group-title">Ваше общее впечатление:</div>
         <div class="form__row">
           <input id="rating-positive" type="radio" name="rating" value="Положительное" checked>
-          <label class="form__label-radio" for="rating-positive">Скорее положительное</label>
+          <label class="form__label-radio" for="rating-positive" tabindex="0">Скорее положительное</label>
         </div>
         <div class="form__row">
           <input id="rating-negative" type="radio" name="rating" value="Отрицательное">
@@ -110,7 +112,7 @@
         <div class="form__group-title">Посещенные <br class="break-non-mobile">достопримечательности:</div>
         <div class="form__row">
           <input id="place1" type="checkbox" name="place1" checked>
-          <label class="form__label-checkbox" for="place1">Мост Дьявола</label>
+          <label class="form__label-checkbox" for="place1" tabindex="0">Мост Дьявола</label>
         </div>
         <div class="form__row">
           <input id="place2" type="checkbox" name="place2" checked>
@@ -128,7 +130,7 @@
       <fieldset class="form__group form__group--comment">
         <legend class="visually-hidden">Отзыв</legend>
         <div class="form__group-title">Опишите свои эмоции:</div>
-        <textarea name="comment" placeholder="Опишите подробно все свои восторги"></textarea>
+        <textarea name="comment" placeholder="Опишите подробно все свои восторги" aria-label="Отзыв"></textarea>
       </fieldset>
       <small class="form__legend">* — Обязательные поля</small>
       <button class="form__button button button--ordinary" formaction="#modal-success" type="submit">Отправить отзыв</button>
@@ -167,13 +169,25 @@
     <div class="page-footer__social social">
       <ul class="social__list">
         <li class="social__item">
-          <a class="social__link social__link--twitter" href="#" aria-label="Твиттер"></a>
+          <a href="#" aria-label="Твиттер">
+            <svg class="social__icon" width="18" height="15">
+              <use xlink:href="img/sprite.svg#twitter"></use>
+            </svg>
+          </a>
         </li>
         <li class="social__item">
-          <a class="social__link social__link--facebook" href="#" aria-label="Фейсбук"></a>
+          <a href="#" aria-label="Фейсбук">
+            <svg class="social__icon" width="9" height="19">
+              <use xlink:href="img/sprite.svg#facebook"></use>
+            </svg>
+          </a>
         </li>
         <li class="social__item">
-          <a class="social__link social__link--youtube" href="#" aria-label="Ютуб"></a>
+          <a href="#" aria-label="Ютуб">
+            <svg class="social__icon" width="20" height="14">
+              <use xlink:href="img/sprite.svg#youtube"></use>
+            </svg>
+          </a>
         </li>
       </ul>
     </div>
@@ -183,7 +197,7 @@
     </div>
   </footer>
 
-  <script src="js/script.js"></script>
+  <script src="js/script.min.js"></script>
 
 </body>
 

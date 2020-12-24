@@ -1,10 +1,10 @@
 .break-non-mobile {
-  @media (max-width: $width-mobile-only) {
-    display: none;
+  display: none;
+
+  @media (min-width: $width-mobile-only) {
+    display: inline;
   }
 }
-
-// .break-tablet-only {}
 
 .break-desktop-only {
   display: none;

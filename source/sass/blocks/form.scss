@@ -17,13 +17,14 @@
       "places places"
       "comment comment"
       "button legend";
-    padding: 60px 7.8125%;
+    padding: 60px;
   }
 
   @media (min-width: $width-desktop) {
-    padding: 50px 10% 65px;
+    padding: 50px 120px 65px;
   }
 }
+
 
 // Стилизация внутренних элементов
 .form__group-title {
