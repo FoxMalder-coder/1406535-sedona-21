@@ -1,7 +1,6 @@
 .page-logo {
-  position: relative;
-  width: 229px;
-  height: 39px;
+  width: 282px;
+  height: 214px;
 
   img {
     width: 100%;
@@ -11,58 +10,20 @@
 
   @media (min-width: $width-tablet) {
     width: 460px;
-    height: 80px;
+    height: 350px;
   }
 }
 
-.page-logo--main {
-  width: 282px;
-  height: 210px;
-  padding: 83px 0;
-  object-fit: contain;
+.page-logo--not-main {
+  width: 229px;
+  height: 39px;
+
+  img {
+    height: 100%;
+  }
 
   @media (min-width: $width-tablet) {
     width: 460px;
-    height: 360px;
-    padding: 133.5px 0;
-  }
-
-  &::after,
-  &::before {
-    position: absolute;
-    content: "";
-  }
-
-  &::before {
-    top: 0;
-    left: (282px - 157px) / 2;
-    width: 157px;
-    height: 52px;
-    background-image: url("../img/page-logotype-before.svg");
-    background-size: cover;
-    background-repeat: no-repeat;
-
-    @media (min-width: $width-tablet) {
-      left: (460px - 257px) / 2;
-      width: 257px;
-      height: 85px;
-    }
-  }
-
-  &::after {
-    bottom: -4px;
-    left: (282px - 180px) / 2 - 5px;
-    width: 180px;
-    height: 48px;
-    background-image: url("../img/page-logotype-after.svg");
-    background-size: cover;
-    background-repeat: no-repeat;
-
-    @media (min-width: $width-tablet) {
-      bottom: 10px;
-      left: (460px - 295px) / 2 - 10px;
-      width: 295px;
-      height: 80px;
-    }
+    height: 80px;
   }
 }

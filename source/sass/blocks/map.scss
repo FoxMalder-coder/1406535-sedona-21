@@ -23,7 +23,7 @@
     background-image: url("../img/map-mobile@2x.jpg");
   }
 
-  @media (min-width: $width-mobile-only) and (max-width: $width-tablet) {
+  @media (min-width: 481px) {
     background-image: url("../img/map-tablet.jpg");
 
     @media (min-resolution: 2dppx) {

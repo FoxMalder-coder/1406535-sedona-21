@@ -13,82 +13,71 @@
 }
 
 .benefits__item {
+  display: grid;
+  grid-template-areas:
+    "icon title"
+    "icon text";
+  grid-column-gap: 12px;
   margin-bottom: 18px;
-  padding-top: 10px;
-  padding-left: 55px;
-  background-repeat: no-repeat;
 
   &:last-child {
     margin-bottom: 0;
   }
 
   @media (min-width: $width-mobile-only) {
-    width: 31%;
-    margin: 0;
-    padding: 45px 0 0;
+    width: 33.33%;
+    padding: 0 18px;
+    grid-template-areas:
+      "icon"
+      "title"
+      "text";
+    grid-template-columns: 1fr;
+    justify-items: center;
   }
 
   @media (min-width: $width-tablet) {
-    width: 25%;
-    padding: 98px 0 0;
+    padding: 0 32px;
+  }
+
+  @media (min-width: $width-desktop) {
+    padding: 0 50px;
   }
 }
 
-.benefits__item--house {
-  background-image: url("../img/icon-house.svg");
-  background-size: 39px 37px;
-  background-position: 5px 0;
-
-  @media (min-width: $width-mobile-only) {
-    background-position: top center;
-  }
+.benefits__icon {
+  grid-area: icon;
+  color: $light-blue;
+  width: 40px;
+  height: 40px;
 
   @media (min-width: $width-tablet) {
-    background-size: 75px 72px;
+    width: 75px;
+    height: 75px;
   }
 }
 
 .benefits__item--gift {
-  background-image: url("../img/icon-gift.svg");
-  background-size: 32px 38px;
-  background-position: 10px 0;
-
-  @media (min-width: $width-mobile-only) {
-    background-position: top center;
-  }
-
   @media (min-width: $width-tablet) {
     order: 1;
-    background-size: 64px 75px;
   }
 }
 
-.benefits__item--food {
-  background-image: url("../img/icon-food.svg");
-  background-size: 40px 35px;
-  background-position: 4px 5px;
-
-  @media (min-width: $width-mobile-only) {
-    background-position: center 3px;
-  }
-
-  @media (min-width: $width-tablet) {
-    background-size: 76px 68px;
-  }
-}
 
 .benefits__title {
-  margin: 0;
+  grid-area: title;
+  margin: 15px 0 0;
   padding: 0;
 
   @include text(18px, 26px, 700, $black);
 
   @media (min-width: $width-tablet) {
     font-size: 21px;
+    margin-top: 25px;
   }
 }
 
 .benefits__text {
+  grid-area: text;
   margin: 15px 0 0;
 
   @media (min-width: $width-tablet) {
