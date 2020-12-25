@@ -110,6 +110,7 @@
   position: relative;
   display: block;
   width: auto;
+  outline: none;
 
   @include text(18px, 26px, 700, $black);
   padding-top: 14px;
