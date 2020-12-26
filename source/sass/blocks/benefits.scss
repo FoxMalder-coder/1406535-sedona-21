@@ -4,6 +4,7 @@
   flex-direction: column;
   text-transform: uppercase;
   text-align: left;
+  flex-wrap: wrap;
 
   @media (min-width: $width-mobile-only) {
     flex-direction: row;
@@ -22,6 +23,10 @@
 
   &:last-child {
     margin-bottom: 0;
+
+    @media (min-width: $width-mobile-only) {
+      margin-bottom: 18px;
+    }
   }
 
   @media (min-width: $width-mobile-only) {
